@@ -9,12 +9,12 @@
 
 本專案是一份**動態更新的量化交易研發日誌**。
 
-作為一名擁有物理系背景的學生，我致力於挑戰傳統僅依賴靜態模型（如 Black-Scholes）的交易思維。本專案記錄了我如何透過第一原理思考（First Principles Thinking），將**物理學直覺**轉化為具備**正期望值（Positive Expectancy）**的選擇權策略。
+作為一名擁有物理系背景的學生，我致力於挑戰傳統僅依賴靜態模型（如 Black-Scholes）的交易思維。本專案記錄了我如何透過第一原理思考（First Principles Thinking），將物理學直覺轉化為具備正期望值（Positive Expectancy）的選擇權策略。
 
-這裡沒有死記硬背的公式，只有對市場**微觀結構（Microstructure）**與**二階效應（Second-Order Greeks）**的深度推演與實戰模擬。
+這裡沒有死記硬背的公式，只有對市場微觀結構（Microstructure）與二階效應（Second-Order Greeks）的深度推演與模擬。
 
 ###  核心目標
-建立一套專注於捕捉**結構性錯誤定價（Structural Mispricing）**的交易體系：
+建立一套專注於捕捉結構性錯誤定價（Structural Mispricing）的交易體系：
 * **觀察能量：** 透過波動率曲面（Volatility Surface）識別市場位能。
 * **理解場論：** 分析造市商（Dealer）的 Gamma 部位如何形成價格的「引力」或「斥力」。
 * **掌握流體：** 利用希臘字母的動態變化（Charm, Vanna）來應對時間與波動率的流動。
