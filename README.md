@@ -16,10 +16,10 @@
 - **造市商與資金流如何影響價格路徑？**
 - **為什麼名義上 Long Vega 的部位，遇到崩跌時仍然會虧損？**
 
-這裡不強調背公式，而是強調：
-
-> **市場微觀結構（microstructure）＋ 二階希臘值（second-order Greeks）  
-> ＝ 策略真正的風險來源與 alpha 來源。**
+> **本專案聚焦於拆解策略背後的底層驅動：
+> 
+> Microstructure、Volatility Surface、Term Structure 與 Greeks Dynamics  
+> 如何共同影響 P/L 的生成與風險暴露。**
 
 ---
 
