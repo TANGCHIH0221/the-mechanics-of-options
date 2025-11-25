@@ -1,7 +1,7 @@
-# The Physics of Alpha: 衍生品交易的結構與實戰演算法  
+# Options as Physical Systems: 衍生品交易的結構與實戰模擬
 ### A Trader's Journal: Bridging Theoretical Physics and Market Microstructure
 
-> 「市場不僅僅是隨機漫步，它是一個受制於資金流動、結構限制與能量守恆的複雜物理系統。」
+> 「市場不僅僅是隨機漫步，它是一個受制於資金流動、結構限制與自適應的複雜物理系統。」
 
 ---
 
