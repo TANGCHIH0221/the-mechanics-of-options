@@ -1,4 +1,4 @@
-# The Physics of Alpha: 衍生品交易的結構與實戰演算法
+# The Physics of Alpha: 衍生品交易的結構與實戰演算法  
 ### A Trader's Journal: Bridging Theoretical Physics and Market Microstructure
 
 > 「市場不僅僅是隨機漫步，它是一個受制於資金流動、結構限制與能量守恆的複雜物理系統。」
@@ -7,60 +7,137 @@
 
 ##  關於本專案 (About This Project)
 
-本專案是一份**動態更新的量化交易研發日誌**。
+本專案是一份**持續更新的衍生品交易研究與訓練日誌**。
 
-作為一名擁有物理系背景的學生，我致力於挑戰傳統僅依賴靜態模型（如 Black-Scholes）的交易思維。本專案記錄了我如何透過第一原理思考（First Principles Thinking），將物理學直覺轉化為具備正期望值（Positive Expectancy）的選擇權策略。
+作為一名具有物理背景的學生，我希望跳脫只依賴 Black–Scholes 這類**靜態封閉解模型**的思維，  
+改用「第一原理思考（First Principles Thinking）」與「物理直覺」，去理解：
 
-這裡沒有死記硬背的公式，只有對市場微觀結構（Microstructure）與二階效應（Second-Order Greeks）的深度推演與模擬。
+- **隱含波動率曲面如何變形？**
+- **造市商與資金流如何影響價格路徑？**
+- **為什麼名義上 Long Vega 的部位，遇到崩跌時仍然會虧損？**
 
-###  核心目標
-建立一套專注於捕捉結構性錯誤定價（Structural Mispricing）的交易體系：
-* **觀察能量：** 透過波動率曲面（Volatility Surface）識別市場位能。
-* **理解場論：** 分析造市商（Dealer）的 Gamma 部位如何形成價格的「引力」或「斥力」。
-* **掌握流體：** 利用希臘字母的動態變化（Charm, Vanna）來應對時間與波動率的流動。
+這裡不強調背公式，而是強調：
+
+> **市場微觀結構（microstructure）＋ 二階希臘值（second-order Greeks）  
+> ＝ 策略真正的風險來源與 alpha 來源。**
+
+---
+
+##  核心目標 (Core Objectives)
+
+本專案的目標是逐步建立一套，專注於**結構性錯誤定價（Structural Mispricing）**的交易體系：
+
+1. **觀察能量**  
+   - 研究波動率曲面（Volatility Surface），視為市場的「位能分佈」  
+   - 找出市場對某些履約價 / 期限「過度恐懼或過度樂觀」的區域  
+
+2. **理解場論**  
+   - 以造市商 Gamma / Vega 部位，來理解價格附近的「引力／斥力」  
+   - 探討 dealer hedging flows 如何形成短期價格「重力場」  
+
+3. **掌握流體**  
+   - 將 Charm、Vanna 等視為「流體力學」中的流速與剪切力  
+   - 分析時間流逝與波動率變動如何改變部位的方向與槓桿
 
 ---
 
 ##  核心哲學：物理 × 金融 (Physics Meets Finance)
 
-我相信金融市場的運作機制與物理系統有著驚人的相似性。本專案的核心在於將物理概念映射到交易實戰中：
+我相信金融市場與物理系統有著高度類似的結構。  
+以下是本專案常用的類比框架：
 
-| 物理概念 (Physics) | 金融對應 (Finance) | 實戰應用 (Trading Edge) |
-| :--- | :--- | :--- |
-| **位能井 (Potential Well)** | **造市商 Gamma 擁擠 (Dealer Long Gamma)** | 識別價格被「釘住 (Pinned)」的區間，利用 Iron Butterfly 獲取 Theta。 |
-| **相變 (Phase Transition)** | **負凸性爆發 (Negative Convexity)** | 預判波動率由平靜轉為湍流的臨界點，避免 Short Gamma 策略的尾部風險。 |
-| **阻尼運動 (Damping)** | **均值回歸 (Mean Reversion)** | 分析資金流 (Flows) 何時會抑制波動，何時會加速崩跌。 |
-| **時間流逝 (Entropy)** | **Charm ($\partial \Delta / \partial t$)** | 利用週末或假期效應，計算 OTM 選項 Delta 衰減帶來的自動槓桿變化。 |
+| 物理概念 (Physics)      | 金融對應 (Finance)                            | 實戰應用 (Trading Edge) |
+|-------------------------|-----------------------------------------------|-------------------------|
+| 位能井 (Potential Well) | 造市商 Gamma 擁擠 (Dealer Long Gamma)        | 識別價格被「釘住」的區間，設計 Iron Butterfly / Short Straddle 收 Theta。 |
+| 相變 (Phase Transition) | 負凸性爆發、Vol Regime Shift                  | 預判平靜 → 湍流的臨界點，避免 Short Gamma / Short Vega 的尾部風險。 |
+| 阻尼運動 (Damping)      | 均值回歸 (Mean Reversion)                    | 觀察資金流如何「抑制」或「加速」波動，選擇 Reversion vs Breakout 策略。 |
+| 熵與時間 (Entropy)      | Charm (∂Δ/∂t)、時間衰減                      | 利用週末 / 假期效應，評估 OTM 選項 Delta 衰減帶來的隱含槓桿變化。 |
 
----
-
-##  專案結構與模組 (Training Logs)
-
-本專案將會**每日更新**，依據不同的市場情境進行模組化的訓練與紀錄。
-
-### **Module 1: 造市商的重力場 (Microstructure & Gamma)**
-* **研究重點：** 分析 Open Interest 與 Dealer Hedging Flows 對價格移動的影響。
-* **課題舉例：**  為什麼價格會在整數關卡出現「釘選效應 (Pinning)」？如何分辨市場處於正 Gamma (抗跌) 還是負 Gamma (助跌) 環境？
-
-### **Module 2: 希臘字母的流體力學 (Advanced Greeks)**
-* **研究重點：** 超越常見的 Delta 與 Theta，探討二階希臘字母的動態風險。
-* **課題舉例：**  **Charm (Delta Decay)** 如何在週末造成部位偏移？**Vanna** 如何在崩盤時加速 Delta 的變化？
-
-### **Module 3: 恐懼的幾何形狀 (Volatility Surface)**
-* **研究重點：** 解析期限結構 (Term Structure) 與微笑曲線 (Skew) 的變形。
-* **課題舉例：** 應對 Contango 與 Backwardation 的結構轉換；Calendar Spread 在不同 Skew 環境下的獲利陷阱。
-
-### **Module 4: 結構化策略設計 (Strategy Architecture)**
-* **研究重點：** 針對特定物理情境設計最優化的選擇權結構。
-* **課題舉例：** 從 Calendar, Diagonal 到 Iron Condor 的變形與防禦機制。
+這些不是為了華麗比喻，而是用來**建立可重複的直覺與決策框架**。
 
 ---
 
-##  自我修正與成長 (Iterative Learning)
+##  專案結構與訓練模組 (Project Structure & Modules)
 
-這不只是一份成功案例的展示，更包含了我的**試錯過程**。
-在 `Training_Logs` 中，我會誠實記錄每一次直覺錯誤（例如誤判 Skew 的影響），以及如何透過邏輯推導進行修正的過程。我認為，**修正錯誤的思維路徑比標準答案更有價值**。
+本專案以「訓練模組（Modules）」的方式組織內容，並搭配每日訓練紀錄。
+
+### Module 1：造市商的重力場 (Microstructure & Gamma)
+
+- **研究重點**：  
+  - Open Interest 分佈  
+  - Dealer Gamma / Vega 曝險  
+  - Hedging flows 對價格路徑的影響
+- **典型問題**：  
+  - 為什麼價格常黏在整數關卡（pinning effect）附近？  
+  - 如何判斷目前環境偏向「正 Gamma（抗跌、抗漲）」或「負 Gamma（助跌、助漲）」？
 
 ---
 
-> *Disclaimer: 本專案內容為個人研究，旨在展示量化邏輯與結構思維，不構成任何投資建議。*# the-mechanics-of-options
+### Module 2：希臘字母的流體力學 (Advanced Greeks)
+
+- **研究重點**：  
+  - 超越 Delta / Gamma / Theta 的二階希臘值：Charm, Vanna, Vomma …  
+  - 在不同市場情境中，這些二階效應如何主導 P/L
+- **典型問題**：  
+  - Charm：為何週末時間流逝，會讓原本「看似中性」的部位，方向性偏移？  
+  - Vanna：在崩盤時，Vol 上升 + Spot 下跌如何共同放大 Delta 變化？
+
+---
+
+### Module 3：恐懼的幾何形狀 (Volatility Surface)
+
+- **研究重點**：  
+  - 期限結構（Term Structure）與微笑曲線（Skew / Smile）的變形  
+  - 不同 Regime 下，前端與後端 IV 反應速度的差異
+- **典型問題**：  
+  - Contango → Flatten → Backwardation 的過程中，Calendar Spread 如何從「理論上 Long Vega」變成「實務上虧損」？  
+  - 當標的價格沿著 Skew 下滑時，ATM → OTM 的 IV 遷移如何影響部位價值？
+
+---
+
+### Module 4：結構化策略設計 (Strategy Architecture)
+
+- **研究重點**：  
+  - 以「物理情境」為前提設計選擇權結構  
+  - 分析各種策略的 failure modes（失效模式）
+- **典型問題**：  
+  - 何時適合使用 Calendar / Diagonal / Iron Condor？  
+  - 在不同 vol regime 下，如何調整履約價間距與部位大小來控制 tail risk？
+
+---
+
+##  訓練日誌與自我修正 (Training Logs & Iterative Learning)
+
+本專案不只是展示成功案例，也包含：
+
+- 錯誤判斷（例如：低估 Skew 對 Calendar Spread 的影響）  
+- 對虧損情境的**事後拆解與重建推理**  
+- 將「直覺」轉寫成「可以檢驗的假說與模擬」  
+
+所有這些會整理在 `Training_Logs/` 中。  
+我認為：
+
+> **修正錯誤的過程，比單純得出正確答案，更接近 Trader 真實的工作形態。**
+
+---
+
+## 技術與工具 (Tech Stack)
+
+- Python（模擬與資料處理）
+- NumPy / pandas（數值運算與時間序列）
+- Matplotlib（簡易可視化）
+- 之後將逐步加入：  
+  - 基礎 QuantLib / 自製定價模組  
+  - 簡單 backtesting / scenario simulation 工具
+
+---
+
+##  長期願景 (Long-term Vision)
+
+- 建立一套屬於自己的 **“選擇權物理學” 筆記**  
+- 系統性整理各策略的**結構風險與失效模式**  
+- 強化對 Vol、Greeks 與 Microstructure 的直覺  
+- 以此為基礎，成為能獨立設計、檢驗與執行策略的 **衍生品交易員（Options / Vol Trader）**
+
+---
+
