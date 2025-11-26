@@ -70,6 +70,8 @@
 - **典型問題**：  
   - 為什麼價格常黏在整數關卡（pinning effect）附近？  
   - 如何判斷目前環境偏向「正 Gamma（抗跌、抗漲）」或「負 Gamma（助跌、助漲）」？
+  - * [x] **[Session 001: 波動率曲面動態與結構化偏斜狩獵](Training_Logs/0251126vol_dynamic_and_skew.md)**
+    * **重點：** 崩盤時的 Sticky Strike 識別、Vanna 陷阱、以及 1x2 Ratio Spread 的 Gamma Flip 風險。
 
 ---
 
