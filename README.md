@@ -67,9 +67,7 @@
   - Open Interest 分佈  
   - Dealer Gamma / Vega 曝險  
   - Hedging flows 對價格路徑的影響
-- **典型問題**：  
-  - 為什麼價格常黏在整數關卡（pinning effect）附近？  
-  - 如何判斷目前環境偏向「正 Gamma（抗跌、抗漲）」或「負 Gamma（助跌、助漲）」？
+- **討論問題**：  
   - * [x] **[Session 001: 波動率曲面動態與結構化偏斜狩獵](Traing_Logs/0251126_vol_dynamics_and_skew.md)**
     * **重點：** 崩盤時的 Sticky Strike 識別、Vanna 陷阱、以及 1x2 Ratio Spread 的 Gamma Flip 風險。
 
@@ -131,6 +129,88 @@
 - 之後將逐步加入：  
   - 基礎 QuantLib / 自製定價模組  
   - 簡單 backtesting / scenario simulation 工具
+
+---
+# AI-Assisted Research Framework  
+> **AI is not a shortcut — it is an accelerator for deliberate practice.**
+
+本專案同時使用 **人工智慧（AI）作為研究輔助工具**，  
+讓訓練流程更高效、更結構化，也更接近真實交易室的推理方式。
+
+---
+
+##  Daily Quant Reasoning Training
+
+我利用 AI 自行生成每日訓練題，包括：
+
+- 市場結構邏輯（Microstructure Reasoning）  
+- 波動率體制（Vol Regime）判讀  
+- 高階希臘值（Charm / Vanna / Vomma）動態推理  
+- 崩跌 / 爆漲時的 P&L 拆解  
+- 極端情境下的直覺訓練  
+
+透過 AI，我可以在短時間內接觸大量極端市場案例，  
+加速累積交易直覺與錯誤修正能力。
+
+---
+
+##  AI-Driven Simulation & Verification
+
+AI 協助我快速構建 Python 模型與實驗，用於：
+
+- 測試策略的失效模式（Failure Modes）  
+- 分析 Greeks 隨 Spot / IV / t 的自動演化  
+- 模擬 Sticky-Strike / Sticky-Delta / Sticky-Moneyness  
+- 比較 Calendar / Condor / Ratio Spread 在不同 regime 的行為  
+
+我先以物理直覺提出假設（Hypothesis），  
+再用 AI + Python 進行數值實驗驗證。
+
+---
+
+##  Meta-Learning：透過對話迭代推理
+
+我將 AI 視為「研究室助理 + PM 教練」：
+
+- 讓 AI 用問題 challenge 我的推理  
+- 偵測盲點、提出反例  
+- 協助分析虧損背後的 root-cause  
+- 模擬真實交易室的 decision-making flow  
+
+透過這種方式，我把直覺轉化成可檢驗的模型與假說。
+
+---
+
+## 📡 Market-Facing Readiness
+
+AI 也協助我：
+
+- 快速理解市場新聞與 macro catalyst  
+- 分析 vol surface 的動態變化  
+- 模擬重大事件（NFP / CPI / Crash）的波動率反應  
+- 理解不同 regime 下的 Theta / Vanna / Charm 路徑  
+
+使我能將：
+
+**物理直覺 → 策略設計 → 市場實況**  
+三者連結起來。
+
+---
+
+## Why AI is a Structural Edge
+
+> **我不是被動使用 AI，而是把 AI 當成方法論的一部分。**
+
+AI 讓我能：
+
+- 更快 iterate  
+- 更快驗證想法  
+- 更快理解極端行情的風險暴露  
+- 更快累積市場直覺  
+- 更快建立屬於自己的交易研究體系  
+
+AI 是我訓練流程中的 **「性能增幅器（Performance Amplifier）」**，  
+也是我打造 2025–2030 年衍生品交易能力的核心工具之一。
 
 ---
 
