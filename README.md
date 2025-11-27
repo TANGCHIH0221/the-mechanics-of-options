@@ -89,10 +89,9 @@
 - **研究重點**：  
   - 期限結構（Term Structure）與微笑曲線（Skew / Smile）的變形  
   - 不同 Regime 下，前端與後端 IV 反應速度的差異
-- **典型問題**：  
-  - Contango → Flatten → Backwardation 的過程中，Calendar Spread 如何從「理論上 Long Vega」變成「實務上虧損」？  
-  - 當標的價格沿著 Skew 下滑時，ATM → OTM 的 IV 遷移如何影響部位價值？
-
+- **討論問題**：  
+  - *[x]**[Session 002:時間的物理學 - 期限結構和 charm](Training_Logs/0251127_term_structure_and_time_physics.md)**
+    * **重點** 遠期波動率的能量守恆 、 calendar spread 的gamma陷阱、以及週末的charm效應。
 ---
 
 ### Module 4：結構化策略設計 (Strategy Architecture)
