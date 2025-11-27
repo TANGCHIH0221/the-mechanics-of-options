@@ -67,9 +67,10 @@
   - Open Interest 分佈  
   - Dealer Gamma / Vega 曝險  
   - Hedging flows 對價格路徑的影響
-- **討論問題**：  
-  - *   * [x] **[ Pining Effect](Training_Logs/004_pinning_effect.md)**
-     * **重點：** Gamma 重力井的狄拉克奇異點 (Dirac Delta)、動態避險的負回饋循環 、以及結算日的 Pin Risk。。
+- **討論問題**：
+-  * [x] **[ Pining Effect](Training_Logs/004_pinning_effect.md)**
+    * **重點：** Gamma 重力井的狄拉克奇異點 (Dirac Delta)、動態避險的負回饋循環 、以及結算日的 Pin Risk 。  
+
 
 ---
 
