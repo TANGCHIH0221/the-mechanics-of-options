@@ -25,7 +25,14 @@ $$\Gamma = \frac{N'(d_1)}{S \sigma \sqrt{T-t}}$$
 * 分母 $\sqrt{T-t} \to 0$
 
 因此：
-$\lim_{t \to T} \Gamma(S, t) = \begin{cases} \infty & \text{if } S = K \\ 0 & \text{if } S \neq K \end{cases}$
+
+$$
+\lim_{t \to T} \Gamma(S, t) = 
+\begin{cases} 
+\infty & \text{if } S = K \\
+0 & \text{if } S \neq K 
+\end{cases}
+$$
 
 **物理意義：** 這正是物理學中 **狄拉克 $\delta$ 函數 (Dirac Delta Function)** 的定義。這意味著在 $K$ 點，市場的「慣性質量」趨近無窮大。
 
