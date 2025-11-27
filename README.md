@@ -60,7 +60,7 @@
 | Operator (Greek) | 物理定義 (BSM 視角) | 時間尺度 ($T$) | 波動率尺度 ($\sigma$) | 空間分佈 (Moneyness) |
 | :--- | :--- | :--- | :--- | :--- |
 | **Delta ($\Delta$)** | **Velocity (速度)**<br>$N(d_1)$ | **Step Function**<br>$T \to 0$ 時二元化 (0 或 1) | **Smoothing**<br>$\sigma \uparrow$ 使曲線變平緩 | ATM $\approx$ 0.5 |
-| **Gamma ($\Gamma$)** | **Curvature / Mass (質量)**<br>$\frac{\partial^2 C}{\partial S^2}$ | **Singularity**<br>$\propto \frac{1}{\sqrt{T}}$ (**反比**)<br>快到期時 ATM 爆炸 | **Concentration**<br>$\propto \frac{1}{\sigma}$ (**反比**)<br>低波時能量更集中 | **ATM 最大**<br>向兩側迅速衰減 |
+| **Gamma ($\Gamma$)** | **Curvature**<br>$\frac{\partial^2 C}{\partial S^2}$ | **Singularity**<br>$\propto \frac{1}{\sqrt{T}}$ (**反比**)<br>快到期時 ATM 爆炸 | **Concentration**<br>$\propto \frac{1}{\sigma}$ (**反比**)<br>低波時能量更集中 | **ATM 最大**<br>向兩側迅速衰減 |
 | **Theta ($\Theta$)** | **Entropy (熵增)**<br>$\frac{\partial C}{\partial t}$ | **Acceleration**<br>$\propto \frac{1}{\sqrt{T}}$ (**反比**)<br>最後 30 天加速腐爛 | **Cost of Convexity**<br>$\propto \sigma$ (**正比**)<br>波動越大，租金越貴 | **ATM 最大** (絕對值)<br>OTM 衰減較慢 |
 | **Vega ($\nu$)** | **Temperature Sensitivity**<br>$\frac{\partial C}{\partial \sigma}$ | **Time Weight**<br>$\propto \sqrt{T}$ (**正比**)<br>遠月對 Vol 最敏感 | **Complex**<br>$\sigma$ 改變鐘形曲線寬度 | **ATM 最大**<br>深 ITM/OTM 趨近 0 |
 | **Vanna** | **Slope of Vega (斜率流)**<br>$\frac{\partial \Delta}{\partial \sigma} = \frac{\partial \nu}{\partial S}$ | **Flow**<br>$\propto \sqrt{T}$ (不顯著)<br>隨時間穩定 | **Complex**<br>主要影響 Skew 的斜率 | **ATM $\approx$ 0**<br>**Wings (OTM/ITM) 最大** |
