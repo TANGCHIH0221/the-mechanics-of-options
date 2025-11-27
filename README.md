@@ -61,18 +61,14 @@
 
 本專案以「訓練模組（Modules）」的方式組織內容，並搭配每日訓練紀錄。
 
-### Module 1：造市商的重力場 (Microstructure & Gamma)
+### Module 1：微觀結構與重力場(Microstructure & Gamma)
 
 - **研究重點**：  
   - Open Interest 分佈  
   - Dealer Gamma / Vega 曝險  
   - Hedging flows 對價格路徑的影響
 - **討論問題**：  
-  - * [x] **[Session 001: 波動率曲面動態與結構化偏斜狩獵](Training_Logs/001_Vol_Dynamics_and_Skew.md)**
-    * **重點：** 崩盤時的 Sticky Strike 識別、Vanna 陷阱、以及 1x2 Ratio Spread 的 Gamma Flip 風險。
-    *   * [x] **[Session 002: 時間的物理學 - 期限結構與 Charm](Training_Logs/002_Term_Structure_and_Calendars.md)**
-    * **重點：** 遠期波動率 (Forward Vol) 的能量守恆、Calendar Spread 的 Gamma 陷阱、以及週末的 Charm 效應。
-    *   * [x] **[Session 004: Pining Effect](Training_Logs/004_pinning_effect.md)**
+  - *   * [x] **[ Pining Effect](Training_Logs/004_pinning_effect.md)**
     * **重點：** Gamma 重力井的狄拉克奇異點 (Dirac Delta)、動態避險的負回饋循環 、以及結算日的 Pin Risk。。
 
 ---
@@ -93,7 +89,11 @@
 - **研究重點**：  
   - 期限結構（Term Structure）與微笑曲線（Skew / Smile）的變形  
   - 不同 Regime 下，前端與後端 IV 反應速度的差異
-- **討論問題**：  
+- **討論問題**：
+-  * [x] **[波動率曲面動態與結構化偏斜](Training_Logs/001_Vol_Dynamics_and_Skew.md)**
+    * **重點：** 崩盤時的 Sticky Strike 識別、Vanna 陷阱、以及 1x2 Ratio Spread 的 Gamma Flip 風險。
+-  * [x] **[ 期限結構與 Charm](Training_Logs/002_Term_Structure_and_Calendars.md)**
+    * **重點：** 遠期波動率 (Forward Vol) 的能量守恆、Calendar Spread 的 Gamma 陷阱、以及週末的 Charm 效應。
 
 
 ---
