@@ -181,7 +181,7 @@ AI 協助我快速構建 Python 模型與實驗，用於：
 
 ---
 
-## 📡 Market-Facing Readiness
+## Market-Facing Readiness
 
 AI 也協助我：
 
