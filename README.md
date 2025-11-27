@@ -61,15 +61,14 @@
 在實戰中，我將標準希臘字母視為物理系統中的**算符 (Operators)**。
 以下速查表修正了傳統教科書的靜態觀點，重點關注 $T \to 0$ 的奇異點行為與高階交互作用：
 
-| Operator (Greek) | 物理定義 (BSM 視角) | 時間尺度 ($T$) | 波動率尺度 ($\sigma$) | 空間分佈 (Moneyness) | 實戰備註 (The Edge) |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Delta ($\Delta$)** | **Velocity (速度)**<br>$N(d_1)$ | **Step Function**<br>$T \to 0$ 時二元化 (0 或 1) | **Smoothing**<br>$\sigma \uparrow$ 使曲線變平緩 | ATM $\approx$ 0.5 | 避險的基礎，但在跳空缺口 (Gap Risk) 下失效。 |
-| **Gamma ($\Gamma$)** | **Curvature / Mass (質量)**<br>$\frac{\partial^2 C}{\partial S^2}$ | **Singularity**<br>$\propto \frac{1}{\sqrt{T}}$ (**反比**)<br>快到期時 ATM 爆炸 | **Concentration**<br>$\propto \frac{1}{\sigma}$ (**反比**)<br>低波時能量更集中 | **ATM 最大**<br>向兩側迅速衰減 | **Pinning Risk:** 到期日造市商的重力井來源。 |
-| **Theta ($\Theta$)** | **Entropy (熵增)**<br>$\frac{\partial C}{\partial t}$ | **Acceleration**<br>$\propto \frac{1}{\sqrt{T}}$ (**反比**)<br>最後 30 天加速腐爛 | **Cost of Convexity**<br>$\propto \sigma$ (**正比**)<br>波動越大，租金越貴 | **ATM 最大** (絕對值)<br>OTM 衰減較慢 | **No Free Lunch:** $\Theta$ 是持有 Gamma (爆發力) 的代價。 |
-| **Vega ($\nu$)** | **Temperature Sensitivity**<br>$\frac{\partial C}{\partial \sigma}$ | **Time Weight**<br>$\propto \sqrt{T}$ (**正比**)<br>遠月對 Vol 最敏感 | **Complex**<br>$\sigma$ 改變鐘形曲線寬度 | **ATM 最大**<br>深 ITM/OTM 趨近 0 | 交易員常說 "Long Vega"，其實多半是在賭 Term Structure 變化。 |
-| **Vanna** | **Slope of Vega (斜率流)**<br>$\frac{\partial \Delta}{\partial \sigma} = \frac{\partial \nu}{\partial S}$ | **Flow**<br>$\propto \sqrt{T}$ (不顯著)<br>隨時間穩定 | **Complex**<br>主要影響 Skew 的斜率 | **ATM $\approx$ 0**<br>**Wings (OTM/ITM) 最大** | **重要修正:** Vanna 在 ATM 為零（因為 Vega 處於峰值）。它是造成 Skew 的主因。 |
-| **Vomma** | **Vol Convexity (波動凸性)**<br>$\frac{\partial^2 C}{\partial \sigma^2}$ | **Long Duration**<br>$\propto T$ (**強正比**)<br>長天期才有大 Vomma | **Inverse**<br>低波時 Vomma 較大 | **ATM 最大** | 「做多波動率的波動率」。當 VIX 暴漲時，Vomma 會讓你的 Vega 變得更長。 |
-
+| Operator (Greek) | 物理定義 (BSM 視角) | 時間尺度 ($T$) | 波動率尺度 ($\sigma$) | 空間分佈 (Moneyness) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Delta ($\Delta$)** | **Velocity (速度)**<br>$N(d_1)$ | **Step Function**<br>$T \to 0$ 時二元化 (0 或 1) | **Smoothing**<br>$\sigma \uparrow$ 使曲線變平緩 | ATM $\approx$ 0.5 |
+| **Gamma ($\Gamma$)** | **Curvature / Mass (質量)**<br>$\frac{\partial^2 C}{\partial S^2}$ | **Singularity**<br>$\propto \frac{1}{\sqrt{T}}$ (**反比**)<br>快到期時 ATM 爆炸 | **Concentration**<br>$\propto \frac{1}{\sigma}$ (**反比**)<br>低波時能量更集中 | **ATM 最大**<br>向兩側迅速衰減 |
+| **Theta ($\Theta$)** | **Entropy (熵增)**<br>$\frac{\partial C}{\partial t}$ | **Acceleration**<br>$\propto \frac{1}{\sqrt{T}}$ (**反比**)<br>最後 30 天加速腐爛 | **Cost of Convexity**<br>$\propto \sigma$ (**正比**)<br>波動越大，租金越貴 | **ATM 最大** (絕對值)<br>OTM 衰減較慢 |
+| **Vega ($\nu$)** | **Temperature Sensitivity**<br>$\frac{\partial C}{\partial \sigma}$ | **Time Weight**<br>$\propto \sqrt{T}$ (**正比**)<br>遠月對 Vol 最敏感 | **Complex**<br>$\sigma$ 改變鐘形曲線寬度 | **ATM 最大**<br>深 ITM/OTM 趨近 0 |
+| **Vanna** | **Slope of Vega (斜率流)**<br>$\frac{\partial \Delta}{\partial \sigma} = \frac{\partial \nu}{\partial S}$ | **Flow**<br>$\propto \sqrt{T}$ (不顯著)<br>隨時間穩定 | **Complex**<br>主要影響 Skew 的斜率 | **ATM $\approx$ 0**<br>**Wings (OTM/ITM) 最大** |
+| **Vomma** | **Vol Convexity (波動凸性)**<br>$\frac{\partial^2 C}{\partial \sigma^2}$ | **Long Duration**<br>$\propto T$ (**強正比**)<br>長天期才有大 Vomma | **Inverse**<br>低波時 Vomma 較大 | **ATM 最大** |
 > **Physics Note:** 注意 $\Gamma$ 與 $\Theta$ 的對稱性 ($\Theta \approx -\frac{1}{2}\sigma^2 S^2 \Gamma$)。這代表在物理上，我們無法創造能量，只能在「時間耗損」與「價格凸性」之間進行交換。
 
 ---
