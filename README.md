@@ -90,7 +90,7 @@
   - 期限結構（Term Structure）與微笑曲線（Skew / Smile）的變形  
   - 不同 Regime 下，前端與後端 IV 反應速度的差異
 - **討論問題**：  
-  * [x] **[Session 002: 時間的物理學 - 期限結構與 Charm](Training_Logs/0251127_term_structure_and_time_physics.md)**
+  * [x] **[Session 002: 時間的物理學 - 期限結構與 Charm](Traing_Logs/0251127_term_structure_and_time_physics.md)**
     * **重點：** 遠期波動率 (Forward Vol) 的能量守恆、Calendar Spread 的 Gamma 陷阱、以及週末的 Charm 效應。
 
 ---
