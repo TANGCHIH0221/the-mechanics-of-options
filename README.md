@@ -73,7 +73,7 @@
     *   * [x] **[Session 002: 時間的物理學 - 期限結構與 Charm](Training_Logs/002_Term_Structure_and_Calendars.md)**
     * **重點：** 遠期波動率 (Forward Vol) 的能量守恆、Calendar Spread 的 Gamma 陷阱、以及週末的 Charm 效應。
     *   * [x] **[Session 004: Pining Effect](Training_Logs/004_pinning_effect.md)**
-    * **重點：**Gamma 重力井的狄拉克奇異點 (Dirac Delta)、動態避險的負回饋循環 、以及結算日的 Pin Risk。。
+    * **重點：** Gamma 重力井的狄拉克奇異點 (Dirac Delta)、動態避險的負回饋循環 、以及結算日的 Pin Risk。。
 
 ---
 
