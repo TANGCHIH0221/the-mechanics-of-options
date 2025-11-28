@@ -17,7 +17,7 @@
     * 這與 "Sticky Delta"（Skew 曲線隨著股價沿 Moneyness 滑動）形成強烈對比。
 
 ### 避險陷阱：Vanna 曝險 (The Vanna Trap)
-對於造市商 (Market Maker) 或持有 Short OTM Puts 的交易員來說，如果在崩盤時錯誤假設了 **Sticky Delta**，將導致災難性的 **避險不足 (Under-Hedge)**。
+對於造市商 (Market Maker) 或持有 Short OTM Puts 的交易員來說，如果在崩盤時錯誤假設了 **Sticky Delta**，將導致災難性的避險不足 (Under-Hedge)。
 
 **數學推導：**
 Delta 的總變化量為：
