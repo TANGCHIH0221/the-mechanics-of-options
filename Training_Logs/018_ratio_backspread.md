@@ -50,15 +50,15 @@ $$
 * **誤區:** 以為賣了昂貴的 ATM Call (High Vega)，所以自己是 Short Vega。
 * **真相:** 1x2 結構通常是 **Net Long Vega**。
 
-  $$
-  \text{Vega}_{net} = -\text{Vega}_{ATM} + 2 \times \text{Vega}_{OTM} > 0
-  $$
-  
-* **災難:** 當市場暴漲 (Spot Rally)，通常伴隨隱含波動率崩跌 (**Vol Crush**)。
-  
-  $$
-  \text{P\&L}_{Vega} = \text{Vega}_{net} \times \Delta \sigma < 0
-  $$
+    $$
+    \text{Vega}_{\text{net}} = -\text{Vega}_{\text{ATM}} + 2 \times \text{Vega}_{\text{OTM}} > 0
+    $$
+
+* **災難:** 當市場暴漲 (Spot Rally)，通常伴隨隱含波動率崩跌 (Vol Crush)。
+
+    $$
+    \text{P\&L}_{\text{Vega}} = \text{Vega}_{\text{net}} \times \Delta \sigma < 0
+    $$
   
   你做對了 Delta，但被 Vega 殺死。這種現象會導致 BEP 動態向右移動，讓你永遠追不到獲利點。
 
