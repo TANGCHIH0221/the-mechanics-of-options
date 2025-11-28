@@ -1,7 +1,7 @@
 # Session 001: 波動率曲面動態與結構化偏斜狩獵
 
 **Date:** 2025-11-26
-**Focus:** 崩盤時的市場體制識別 (Regime Identification)、局部波動率 (Local Vol) 的物理直覺、以及構建 Delta 中性的偏斜 (Skew) 策略。
+* **Focus:** 崩盤時的市場體制識別 (Regime Identification)、局部波動率 (Local Vol) 的物理直覺、以及構建 Delta 中性的偏斜 (Skew) 策略。
 
 ---
 
