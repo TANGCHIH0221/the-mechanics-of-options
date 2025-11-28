@@ -73,6 +73,22 @@
 
 本專案以「訓練模組（Modules）」的方式組織內容，並搭配每日訓練紀錄。
 
+### Module 0：市場作為決策系統 (Decision Theory & Physics)
+
+**WHY：** 所有的 Alpha 最終都源於決策的品質，而非運氣。
+本模組建立交易的「公理體系」，透過賽局理論與統計物理，重新定義何謂「正確的決策」。
+
+- **研究重點**：
+  - **遍歷性 (Ergodicity)**：為何正確的決策可能導致破產？(時間平均 vs 系統平均)
+  - **熵增與同質化 (Entropy)**：為何資訊擁擠會導致 EV 歸零？
+  - **相變 (Phase Transition)**：如何利用凸性 (Convexity) 達到階級躍遷的「逃逸速度」？
+
+- **討論問題 (The Axioms)**：
+  - * [x] **[Session 000: 射龍門賽局與階級流動](Training_Logs/000_Decision_Theory_and_Class_Mobility.md)**
+    * **重點 0.1 (-EV 的本質)：** 選擇比結果重要。富人與賭鬼的決策邏輯可能相同，差別在於部位規模管理 (Kelly Criterion)
+   
+---  
+
 ### Module 1：微觀結構與重力場(Microstructure & Gamma)
 
 - **研究重點**：  
