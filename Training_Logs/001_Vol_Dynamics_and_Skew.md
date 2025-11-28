@@ -1,10 +1,11 @@
 # Session 001: 波動率曲面動態與結構化偏斜狩獵
+
 **Date:** 2025-11-26
 **Focus:** 崩盤時的市場體制識別 (Regime Identification)、局部波動率 (Local Vol) 的物理直覺、以及構建 Delta 中性的偏斜 (Skew) 策略。
 
 ---
 
-## 1. 市場微觀結構：黏性體制 (The "Sticky" Regimes)
+## Section 1: 市場微觀結構：黏性體制 (The "Sticky" Regimes)
 
 ### 市場情境 (The Scenario)
 在市場崩盤或恐慌初期，隱含波動率 (IV) 曲面的行為模式會發生劇烈變化。能否正確識別這種「相變 (Phase Transition)」，決定了避險模型的成敗。
@@ -30,7 +31,7 @@ $$d\Delta \approx \Gamma dS + \text{Vanna} d\sigma$$
 
 ---
 
-## 2. 局部波動率：恐懼的幾何學 (The Geometry of Fear)
+## Section 2: 局部波動率：恐懼的幾何學 (The Geometry of Fear)
 
 ### 物理直覺：平均速度 vs. 瞬時速度
 為了理解隱含波動率 (IV) 與局部波動率 (LV) 的關係，我們使用運動學類比：
@@ -53,7 +54,7 @@ $$\sigma_{loc}(K) \approx \sigma_{imp}(K) + K \frac{\partial \sigma_{imp}}{\part
 
 ---
 
-## 3. 結構化設計：狩獵偏斜 (Hunting the Skew)
+## Section 3: 結構化設計：狩獵偏斜 (Hunting the Skew)
 
 ### 戰略目標
 * **市場狀態：** 崩盤後 (Post-crash)。VIX 處於高檔，Skew 極度陡峭 (OTM Puts 相對於 ATM 非常昂貴)。
@@ -83,7 +84,7 @@ $$P\&L \approx \text{Vega}_{short} \times (\text{OTM Vol 下降}) - \text{Vega}_
 
 ---
 
-### 4. 程式碼視覺化概念 (Python Lab)
+### Section 4: 程式碼視覺化概念 (Python Lab)
 *計劃實作：分析 Skew 斜率與 LV 代理變數*
 
 ```python
