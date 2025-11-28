@@ -18,7 +18,7 @@ Ratio Backspread 的本質是構建一個非線性的動能場，模擬從「重
 我們需要證明 Gamma 曲線如何翻轉，以及需要多少峰度 (Kurtosis) 才能逃離死亡谷。
 
 ### 1. The Gamma Flip (相變點推導)
-部位結構：$V = -C(K_{1}) + 2C(K_{2})$ (假設 1x2 Call Ratio)。
+部位結構： $V = -C(K_{1}) + 2C(K_{2})$ (假設 1x2 Call Ratio)。
 淨 Gamma 為二階導數的疊加：
 
 $$
