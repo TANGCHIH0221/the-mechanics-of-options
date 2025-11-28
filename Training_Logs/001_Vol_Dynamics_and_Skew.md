@@ -30,7 +30,7 @@ $$d\Delta \approx \Gamma dS + \text{Vanna} d\sigma$$
 
 ---
 
-## Section 2: 局部波動率：恐懼的幾何學 (The Geometry of Fear)
+## Section 2: 局部波動率
 
 ### 物理直覺：平均速度 vs. 瞬時速度
 為了理解隱含波動率 (IV) 與局部波動率 (LV) 的關係，我們使用運動學類比：
