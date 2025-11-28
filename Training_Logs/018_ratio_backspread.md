@@ -10,8 +10,8 @@ Ratio Backspread 的本質是構建一個非線性的動能場，模擬從「重
 * **重力井 (Gravity Well):** 由 Short ATM Option 構成。這是負 Gamma 與 Theta 衰減最強的區域 ($S \approx K_{1}$)。
 * **逃逸速度 (Escape Velocity):** 為了獲利，資產價格 $S_{t}$ 必須具備足夠的動能 (Realized Volatility)，在 Theta 耗盡燃料之前，衝破 Break-even Point (BEP)。
 * **相變 (Phase Transition):** 當價格穿越 **Gamma Flip** 點時，部位性質發生質變：
-    * **Bound State ($S < S_{flip}$):** Net Short Gamma (受困於引力，時間是敵人)。
-    * **Free State ($S > S_{flip}$):** Net Long Gamma (擺脫引力，動能轉化為指數級獲利)。
+    * **Bound State ($S < S_{\text{flip}}$):** Net Short Gamma (受困於引力，時間是敵人)。
+    * **Free State ($S > S_{\text{flip}}$):** Net Long Gamma (擺脫引力，動能轉化為指數級獲利)。
 
 ## Section 2: The Financial Mechanics (The Whiteboard Proof)
 
@@ -22,24 +22,24 @@ Ratio Backspread 的本質是構建一個非線性的動能場，模擬從「重
 淨 Gamma 為二階導數的疊加：
 
 $$
-\Gamma_{net}(S) = -\Gamma(S; K_{1}) + 2\Gamma(S; K_{2})
+\Gamma_{\text{net}}(S) = -\Gamma(S; K_{1}) + 2\Gamma(S; K_{2})
 $$
 
 由於 Gamma 分佈 $\Gamma(S) \propto e^{-d_{1}^{2}/2}$ 是鐘形曲線：
-* 當 $S \approx K_{1}$ (ATM): $\Gamma(K_{1}) \gg \Gamma(K_{2}) \implies \Gamma_{net} < 0$ (Risk Zone).
-* 當 $S \to K_{2}$ (OTM): $\Gamma(K_{2})$ 上升且權重加倍 $\implies \Gamma_{net} > 0$ (Profit Zone).
+* 當 $S \approx K_{1}$ (ATM): $\Gamma(K_{1}) \gg \Gamma(K_{2}) \implies \Gamma_{\text{net}} < 0$ (Risk Zone).
+* 當 $S \to K_{2}$ (OTM): $\Gamma(K_{2})$ 上升且權重加倍 $\implies \Gamma_{\text{net}} > 0$ (Profit Zone).
 
-臨界點 (Flip Point) $S^{*}$ 滿足：
+臨界點 (Flip Point) $S^{\ast}$ 滿足：
 
 $$
-\Gamma(S^{*}; K_{1}) = 2\Gamma(S^{*}; K_{2})
+\Gamma(S^{\ast}; K_{1}) = 2\Gamma(S^{\ast}; K_{2})
 $$
 
 ### 2. The Break-Even Approximation (逃逸距離)
 忽略權利金淨收支 (Assuming Zero Cost)，損益兩平點近似為：
 
 $$
-S_{BEP} \approx K_{1} + 2(K_{2} - K_{1}) = 2K_{2} - K_{1}
+S_{\text{BEP}} \approx K_{1} + 2(K_{2} - K_{1}) = 2K_{2} - K_{1}
 $$
 
 **物理意義：** 這展示了極高的位能壁壘。若 Strike 差距 $\Delta K = 10$，價格必須從 $K_{2}$ 再漲 10 點才能開始獲利。這證明了此策略高度依賴 **Fat-tail (肥尾)** 事件，常態分佈 (Normal Distribution) 的假設在此策略下期望值為負。
@@ -55,13 +55,13 @@ $$
 * **真相:** 1x2 結構通常是 **Net Long Vega**。
 
 $$
-\text{Vega}_{net} = -\text{Vega}_{ATM} + 2 \times \text{Vega}_{OTM} > 0
+\text{Vega}_{\text{net}} = -\text{Vega}_{\text{ATM}} + 2 \times \text{Vega}_{\text{OTM}} > 0
 $$
 
 * **災難:** 當市場暴漲 (Spot Rally)，通常伴隨隱含波動率崩跌 (Vol Crush)。
 
 $$
-\text{PnL}_{Vega} = \text{Vega}_{net} \times \Delta \sigma < 0
+\text{PnL}_{\text{Vega}} = \text{Vega}_{\text{net}} \times \Delta \sigma < 0
 $$
 
 你做對了 Delta，但被 Vega 殺死。這種現象會導致 BEP 動態向右移動，讓你永遠追不到獲利點。
