@@ -1,10 +1,11 @@
 # Session 002: 時間的物理學 - 期限結構、遠期波動率與 Charm
+
 **Date:** 2025-11-27
 **Focus:** 深入解析「時間 ($t$)」維度對交易的影響——從宏觀的期限結構 (Term Structure) 到微觀的二階希臘字母 (Charm) 漂移。
 
 ---
 
-## 1. 時間的宏觀幾何：遠期波動率 (Forward Volatility)
+## Section 1: 時間的宏觀幾何：遠期波動率 (Forward Volatility)
 
 ### 變異數的可加性 (The Logic of Variance Additivity)
 交易員常誤以為平坦的期限結構 (Flat Term Structure) 代表市場預期未來波動率恆定。這是錯誤的直覺。
@@ -24,7 +25,7 @@ $$\sigma_{fwd} = \sqrt{\frac{0.04 \times 2 - 0.0225 \times 1}{1}} \approx 24\%$$
 
 ---
 
-## 2. 結構性陷阱：Calendar Spread 與 Gamma 失配
+## Section 2: 結構性陷阱：Calendar Spread 與 Gamma 失配
 
 ### 交易設置 (The Setup - Backwardation)
 * **情境:** 財報發布 (Binary Event) 或 危機爆發。
@@ -47,7 +48,7 @@ $$\sigma_{fwd} = \sqrt{\frac{0.04 \times 2 - 0.0225 \times 1}{1}} \approx 24\%$$
 
 ---
 
-## 3. 時間的微觀力學：Charm (Delta Decay)
+## Section 3: 時間的微觀力學：Charm (Delta Decay)
 
 ### 什麼是 Charm？
 Charm ($\partial \Delta / \partial t$) 描述的是 **Delta 對時間的敏感度**。
@@ -66,7 +67,7 @@ Charm ($\partial \Delta / \partial t$) 描述的是 **Delta 對時間的敏感�
 
 ---
 
-## 4. Python Lab: Forward Vol Visualization
+## Section 4: Python Lab: Forward Vol Visualization
 *Calculating the implied forward volatility from the term structure.*
 
 ```python
