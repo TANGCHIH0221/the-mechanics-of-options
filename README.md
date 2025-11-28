@@ -117,9 +117,9 @@
 - **研究重點**：  
   - 以「物理情境」為前提設計選擇權結構  
   - 分析各種策略的 failure modes（失效模式）
-- **典型問題**：  
-  - 何時適合使用 Calendar / Diagonal / Iron Condor？  
-  - 在不同 vol regime 下，如何調整履約價間距與部位大小來控制 tail risk？
+- **討論問題**：
+- * [x] **[Ratio Backspreads](Training_Logs/018_ratio_backspread.md)**
+    * **重點：** 崩盤時的 Sticky Strike 識別、Vanna 陷阱、以及 1x2 Ratio Spread 的 Gamma Flip 風險。
 
 ---
 
