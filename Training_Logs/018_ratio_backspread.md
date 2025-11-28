@@ -7,8 +7,8 @@
 
 Ratio Backspread 的本質是構建一個非線性的動能場，模擬從「重力井」發射火箭的物理過程。
 
-* **重力井 (Gravity Well):** 由 Short ATM Option 構成。這是負 Gamma 與 Theta 衰減最強的區域 ($S \approx K_1$)。
-* **逃逸速度 (Escape Velocity):** 為了獲利，資產價格 $S_t$ 必須具備足夠的動能 (Realized Volatility)，在 Theta 耗盡燃料之前，衝破 Break-even Point (BEP)。
+* **重力井 (Gravity Well):** 由 Short ATM Option 構成。這是負 Gamma 與 Theta 衰減最強的區域 ($S \approx K_{1}$)。
+* **逃逸速度 (Escape Velocity):** 為了獲利，資產價格 $S_{t}$ 必須具備足夠的動能 (Realized Volatility)，在 Theta 耗盡燃料之前，衝破 Break-even Point (BEP)。
 * **相變 (Phase Transition):** 當價格穿越 **Gamma Flip** 點時，部位性質發生質變：
     * **Bound State ($S < S_{flip}$):** Net Short Gamma (受困於引力，時間是敵人)。
     * **Free State ($S > S_{flip}$):** Net Long Gamma (擺脫引力，動能轉化為指數級獲利)。
@@ -18,31 +18,31 @@ Ratio Backspread 的本質是構建一個非線性的動能場，模擬從「重
 我們需要證明 Gamma 曲線如何翻轉，以及需要多少峰度 (Kurtosis) 才能逃離死亡谷。
 
 ### 1. The Gamma Flip (相變點推導)
-部位結構：$V = -C(K_1) + 2C(K_2)$ (假設 1x2 Call Ratio)。
+部位結構：$V = -C(K_{1}) + 2C(K_{2})$ (假設 1x2 Call Ratio)。
 淨 Gamma 為二階導數的疊加：
 
 $$
-\Gamma_{net}(S) = -\Gamma(S; K_1) + 2\Gamma(S; K_2)
+\Gamma_{net}(S) = -\Gamma(S; K_{1}) + 2\Gamma(S; K_{2})
 $$
 
-由於 Gamma 分佈 $\Gamma(S) \propto e^{-d_1^2/2}$ 是鐘形曲線：
-* 當 $S \approx K_1$ (ATM): $\Gamma(K_1) \gg \Gamma(K_2) \implies \Gamma_{net} < 0$ (Risk Zone).
-* 當 $S \to K_2$ (OTM): $\Gamma(K_2)$ 上升且權重加倍 $\implies \Gamma_{net} > 0$ (Profit Zone).
+由於 Gamma 分佈 $\Gamma(S) \propto e^{-d_{1}^{2}/2}$ 是鐘形曲線：
+* 當 $S \approx K_{1}$ (ATM): $\Gamma(K_{1}) \gg \Gamma(K_{2}) \implies \Gamma_{net} < 0$ (Risk Zone).
+* 當 $S \to K_{2}$ (OTM): $\Gamma(K_{2})$ 上升且權重加倍 $\implies \Gamma_{net} > 0$ (Profit Zone).
 
-臨界點 (Flip Point) $S^*$ 滿足：
+臨界點 (Flip Point) $S^{*}$ 滿足：
 
 $$
-\Gamma(S^*; K_1) = 2\Gamma(S^*; K_2)
+\Gamma(S^{*}; K_{1}) = 2\Gamma(S^{*}; K_{2})
 $$
 
 ### 2. The Break-Even Approximation (逃逸距離)
 忽略權利金淨收支 (Assuming Zero Cost)，損益兩平點近似為：
 
 $$
-S_{BEP} \approx K_1 + 2(K_2 - K_1) = 2K_2 - K_1
+S_{BEP} \approx K_{1} + 2(K_{2} - K_{1}) = 2K_{2} - K_{1}
 $$
 
-**物理意義：** 這展示了極高的位能壁壘。若 Strike 差距 $\Delta K = 10$，價格必須從 $K_2$ 再漲 10 點才能開始獲利。這證明了此策略高度依賴 **Fat-tail (肥尾)** 事件，常態分佈 (Normal Distribution) 的假設在此策略下期望值為負。
+**物理意義：** 這展示了極高的位能壁壘。若 Strike 差距 $\Delta K = 10$，價格必須從 $K_{2}$ 再漲 10 點才能開始獲利。這證明了此策略高度依賴 **Fat-tail (肥尾)** 事件，常態分佈 (Normal Distribution) 的假設在此策略下期望值為負。
 
 ## Section 3: The Trap & Strategy (波動率悖論)
 
@@ -85,13 +85,13 @@ def simulate_death_valley_dynamics(S_range, K1, K2, vol_regime):
     # 1. 計算標準 Payoff (Intrinsic Value)
     intrinsic = -np.maximum(S_range - K1, 0) + 2 * np.maximum(S_range - K2, 0)
     
-    # 2. 計算 T-30, T-15 的 P&L 曲線 (含 Time Value)
+    # 2. 計算 T-30, T-15 的 PnL 曲線 (含 Time Value)
     # 重點: 展示在 100-110 (Strike間) 的凹陷 (Valley)
     
     # 3. 模擬 Vol Crush 效應
     if vol_regime == 'inverse_to_spot':
         # 當 Spot 上漲，強制降低 Vol
-        # 計算此時 Net Vega 對 P&L 的拖累
+        # 計算此時 Net Vega 對 PnL 的拖累
         pass
         
     # Visual Output:
