@@ -7,8 +7,7 @@
 
 ## Section 1: 市場微觀結構：黏性體制 (The "Sticky" Regimes)
 
-### 市場情境 (The Scenario)
-在市場崩盤或恐慌初期，隱含波動率 (IV) 曲面的行為模式會發生劇烈變化。能否正確識別這種「相變 (Phase Transition)」，決定了避險模型的成敗。
+
 
 ### 恐慌的物理學：黏性履約價 (Sticky Strike)
 * **觀察：** 在崩盤時，市場並不會平滑地重新定價機率分佈。相反地，特定價格水準會出現對下檔保護 (Downside Protection) 的「剛性需求」。
