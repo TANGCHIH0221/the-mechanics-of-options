@@ -89,7 +89,4 @@ $$Payoff \propto S^2 \quad (\text{Gamma})$$
 
 ---
 
-### [Mentor's Note]
-這個故事完美詮釋了 Kane (Jane Street) 常說的一句話：
-*"Trading is not about being right; it's about being long convexity when you are right, and flat when you are wrong."*
-富人是運氣好的賭鬼？不，富人是**管理了尾部風險 (Tail Risk)** 的賭鬼。
+
