@@ -1,4 +1,4 @@
-# Session 004: Pinning Effect 
+#  Pinning Effect 
 
 * **Date:** 2025-11-27
 * **Focus:** 理解選擇權到期日，市場微觀結構如何因造市商的 Gamma 避險而產生價格吸力，以及不同結算機制下的風險差異。
