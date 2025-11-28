@@ -119,7 +119,8 @@
   - 分析各種策略的 failure modes（失效模式）
 - **討論問題**：
 - * [x] **[Ratio Backspreads](Training_Logs/018_ratio_backspread.md)**
-    * **重點：** 崩盤時的 Sticky Strike 識別、Vanna 陷阱、以及 1x2 Ratio Spread 的 Gamma Flip 風險。
+    * **重點：**  Ratio Backspread 的死亡谷 (Valley of Death)、Theta–Gamma 對抗、Gamma Flip 相變點、BEP 主方程、Skew Flattening 對 Weighted Vega 的反殺、以及高峰度 (Kurtosis) 在凸性策略中的關鍵角色。。
+     
 
 ---
 
