@@ -107,9 +107,9 @@
 - **研究重點**：  
   - 超越 Delta / Gamma / Theta 的二階希臘值：Charm, Vanna, Vomma …  
   - 在不同市場情境中，這些二階效應如何主導 P/L
-- **典型問題**：  
-  - Charm：為何週末時間流逝，會讓原本「看似中性」的部位，方向性偏移？  
-  - Vanna：在崩盤時，Vol 上升 + Spot 下跌如何共同放大 Delta 變化？
+- **討論問題**：
+-   * [x] **[ 期限結構與 Charm](Training_Logs/002_Term_Structure_and_Calendars.md)**
+    * **重點：** 遠期波動率 (Forward Vol) 的能量守恆、Calendar Spread 的 Gamma 陷阱、以及週末的 Charm 效應。
 
 ---
 
@@ -121,8 +121,7 @@
 - **討論問題**：
 -  * [x] **[波動率曲面動態與結構化偏斜](Training_Logs/001_Vol_Dynamics_and_Skew.md)**
     * **重點：** 崩盤時的 Sticky Strike 識別、Vanna 陷阱、以及 1x2 Ratio Spread 的 Gamma Flip 風險。
--  * [x] **[ 期限結構與 Charm](Training_Logs/002_Term_Structure_and_Calendars.md)**
-    * **重點：** 遠期波動率 (Forward Vol) 的能量守恆、Calendar Spread 的 Gamma 陷阱、以及週末的 Charm 效應。
+
 
 
 ---
