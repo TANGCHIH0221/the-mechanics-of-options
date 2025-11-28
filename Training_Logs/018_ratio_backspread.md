@@ -30,7 +30,10 @@ $$
 * 當 $S \to K_{2}$ (OTM): $\Gamma(K_{2})$ 上升且權重加倍 $\implies \Gamma_{net} > 0$ (Profit Zone).
 
 臨界點 (Flip Point) $S^{*}$ 滿足：
-$$\Gamma(S^{*}; K_{1}) = 2\Gamma(S^{*}; K_{2})$$
+
+$$
+\Gamma(S^{*}; K_{1}) = 2\Gamma(S^{*}; K_{2})
+$$
 
 ### 2. The Break-Even Approximation (逃逸距離)
 忽略權利金淨收支 (Assuming Zero Cost)，損益兩平點近似為：
