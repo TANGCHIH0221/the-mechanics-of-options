@@ -25,25 +25,25 @@
 
 ---
 
-## Section 2: 量化推導：時空對稱性 (Space-Time Symmetry)
+## Section 2: 量化推導：尺度對偶性 (The Duality of Scale)
 
-### Black-Scholes 的隱藏對稱
-在 Black-Scholes 擴散方程中，「空間曲率 (Gamma)」與「時間/能量擴散 (Vega)」存在著精確的互換關係。
+### Gamma 與 Vega 的積分關係
+雖然 Black-Scholes PDE 的核心對稱性在於 Theta ($\Theta$) 與 Gamma ($\Gamma$) 的抵換（時間流逝 vs. 空間凸性），但 Vega 與 Gamma 之間存在著另一個關鍵的 **「積分關係」**。
 
 **推導關係式：**
-利用 BS 公式中的 $\mathcal{V} = S \phi(d_1) \sqrt{\tau}$ 與 $\Gamma = \frac{\phi(d_1)}{S \sigma \sqrt{\tau}}$，可得：
-$$\frac{\mathcal{V}}{\Gamma} = \frac{S \phi(d_1) \sqrt{\tau}}{\frac{\phi(d_1)}{S \sigma \sqrt{\tau}}} = S^2 \sigma \tau$$
-整理後得到 **「時空互換方程」**：
 $$\mathcal{V} = \Gamma \cdot \sigma \cdot S^2 \cdot \tau$$
 
-### 物理詮釋
-1.  **Vega 是積分後的 Gamma：** Vega 代表的是將當下的空間曲率 ($\Gamma$)，沿著剩餘時間 ($\tau$) 和擴散能量 ($\sigma$) 進行積分後的總風險量。
-2.  **Vomma 的本質：**
-    $$\text{Vomma} = \frac{\partial \mathcal{V}}{\partial \sigma} \approx \Gamma \cdot S^2 \cdot \tau$$
-    這表明 Vomma 大致上是 **「時間加權後的 Gamma」**。
-    * **長天期 (Long $\tau$):** 即使 Gamma 很小，由於 $\tau$ 很大，Vomma 極大（對 Vol 變化極度敏感）。
-    * **短天期 (Short $\tau$):** 即使 Gamma 很大 (Pin Risk)，Vomma 卻很小（Vega 比較「剛性」）。
+### 物理詮釋 (The Physics of Scaling)
+這個公式揭示了 Vega 本質上是 **「被時間放大的 Gamma」**：
 
+1.  **瞬時 vs. 全局：**
+    * **Gamma ($\Gamma$)** 代表 **「當下」** 價格空間的局部曲率。
+    * **Vega ($\mathcal{V}$)** 代表將這個曲率，沿著 **「剩餘時間 ($\tau$)」** 與 **「能量場 ($\sigma$)」** 積分後的總風險量。
+
+2.  **Vomma 的幾何意義：**
+    因此，Vomma ($\partial \mathcal{V} / \partial \sigma$) 可以被視為：
+    $$\text{Vomma} \approx \Gamma \times \text{Time Factor} (\tau S^2)$$
+    這解釋了為什麼長天期 (Long $\tau$) 選擇權擁有巨大的 Vomma——因為它將 Gamma 的曲率效應在極長的時間維度上進行了積分與放大。
 ---
 
 ## Section 3: 實戰陷阱：Calendar Spread 的長尾幻覺
