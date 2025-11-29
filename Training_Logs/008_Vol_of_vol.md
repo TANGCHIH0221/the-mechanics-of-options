@@ -25,7 +25,7 @@
 
 ---
 
-## Section 2: 量化推導：尺度對偶性 (The Duality of Scale)
+## Section 2: 尺度對偶性 (The Duality of Scale)
 
 ### Gamma 與 Vega 的積分關係
 雖然 Black-Scholes PDE 的核心對稱性在於 Theta ($\Theta$) 與 Gamma ($\Gamma$) 的抵換（時間流逝 vs. 空間凸性），但 Vega 與 Gamma 之間存在著另一個關鍵的 **「積分關係」**。
