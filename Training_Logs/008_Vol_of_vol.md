@@ -46,7 +46,7 @@ $$\mathcal{V} = \Gamma \cdot \sigma \cdot S^2 \cdot \tau$$
     這解釋了為什麼長天期 (Long $\tau$) 選擇權擁有巨大的 Vomma——因為它將 Gamma 的曲率效應在極長的時間維度上進行了積分與放大。
 ---
 
-## Section 3: 實戰陷阱：Calendar Spread 的長尾幻覺
+## Section 3: 實戰陷阱：Calendar Spread 的長尾幻覺與流動性錯配
 
 ### 陷阱描述
 許多交易員認為 Calendar Spread (Short Near / Long Far) 是低風險的 "Long Vega" 策略。
@@ -54,12 +54,19 @@ $$\mathcal{V} = \Gamma \cdot \sigma \cdot S^2 \cdot \tau$$
 * **現實 (The Trap)：** 在崩盤時，市場並不是平行移動。
 
 ### 崩盤物理學 (Crash Physics)
-1.  **期限結構倒掛 (Inversion):** 恐慌導致近月 IV 呈現「奇點」式的爆發。$\Delta \sigma_{near} \gg \Delta \sigma_{far}$。
-2.  **雙重打擊 (Double Whammy):**
-    * **Vega PnL:** 儘管近月 Vega 數值較小，但乘上巨大的 $\Delta \sigma$，造成 Short Leg 虧損遠大於 Long Leg 獲利。
-    * **Gamma PnL:** 隨著現貨價格崩跌，Short Near Put 迅速變成 ATM，Gamma 呈指數上升。交易員被迫在低點拋售期貨避險 (Short Gamma Hedging)，鎖定實質虧損。
 
-**結論：** 在 VIX 飆升初期，Calendar Spread 的表現往往像是一個 **Short Position**，而非 Long Position。
+#### 1. 期限結構倒掛 (Inversion & Term Structure)
+* **現象：** 恐慌導致近月 IV 呈現「奇點」式的爆發 ($\Delta \sigma_{near} \gg \Delta \sigma_{far}$)。
+* **Vega 衝擊：** 儘管近月 Vega 數值較小，但乘上巨大的 $\Delta \sigma$，造成 Short Leg 的 PnL 虧損遠大於 Long Leg 的獲利。這讓一個名義上的 Long Vega 策略變成了實質上的 Short Position。
+
+#### 2. 流動性錯配 (Liquidity Mismatch & Slippage)
+這是一個隱形的殺手。
+* **不對稱的摩擦力：** 近月合約通常流動性極佳，但遠月合約 (Back-end) 流動性稀疏。
+* **造市商撤退：** 當崩盤發生，造市商為了防禦自身的 Vomma 風險，會大幅拉開遠月合約的 **Bid-Ask Spread**。
+* **執行災難：** 當你急需平倉時：
+    * **Buy to Close (Short Near):** 你被迫在 Ask (高價) 買回。
+    * **Sell to Close (Long Far):** 你被迫在 Bid (低價) 賤賣，且因為遠月 Spread 極寬，你必須「讓點」極多才能成交。
+* **結論：** 這種「雙重滑價 (Double Slippage)」往往會吃掉剩餘的所有理論利潤，甚至擴大虧損。
 
 ---
 
