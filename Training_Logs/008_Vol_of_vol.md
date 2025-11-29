@@ -21,7 +21,7 @@
 * **動態視角 (Vomma Effect)：** 當 $\sigma$ 暴漲，Vomma (通常為正) 會導致 Short Vega 的部位規模 **自動膨脹**。
     * 你原本 Short 10,000 Vega。
     * VIX 翻倍後，因為 Vomma 效應，你變成了 Short 50,000 Vega。
-    * **結果：** 虧損呈指數級放大 (Explosive Loss)，這就是「保證金螺旋」的物理根源。
+    * **結果：** 虧損呈指數級放大 (Explosive Loss)，這就是「保證金螺旋」的原因。
 
 ---
 
