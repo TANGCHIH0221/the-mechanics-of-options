@@ -84,7 +84,7 @@
   - **相變 (Phase Transition)**：如何利用凸性 (Convexity) 達到階級躍遷的「逃逸速度」？
 
 - **討論問題 (The Axioms)**：
-  - * [x] **[射龍門賽局與階級流動](Training_Logs/000_Decision_Theory_and_Class_Mobility.md)**
+-  * [x] **[射龍門賽局與階級流動](Training_Logs/000_Decision_Theory_and_Class_Mobility.md)**
      * **重點：**  選擇比結果重要。富人與賭鬼的決策邏輯可能相同，差別在於部位規模管理 。  
 
 ---  
