@@ -98,10 +98,12 @@
   - Hedging flows 對價格路徑的影響
 - **討論問題**：
 -  * [x] **[ Pining Effect](Training_Logs/004_pinning_effect.md)**
-    * **重點：** Gamma 重力井的狄拉克奇異點 (Dirac Delta)、動態避險的負回饋循環 、以及結算日的 Pin Risk 。  
+    * **重點：** Gamma 重力井的狄拉克奇異點 (Dirac Delta)、動態避險的負回饋循環 、以及結算日的 Pin Risk 。
+-  * [x] **[Liquidity Black Holes](Training_Logs/005_liquidity_black_holes.md)**
+    * **重點：** 流動性黑洞、衝擊奇異點 (Impact Singularity)、市價停損的負期望發散、以及逆轉熵值的 Maker 行為。 
 
 
----
+---Training_Logs/005_liquidity_black_holes.md
 
 ### Module 2：希臘字母的流體力學 (Advanced Greeks)
 
