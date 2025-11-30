@@ -15,14 +15,14 @@ $$F_{restore} = -k \cdot \Delta P$$
 
 * **真空/塑性體制 (Vacuum Regime):** 當 $k \to 0$，市場失去恢復力。此時出現 **Quote Fading (報價消風)**——造市商在成交前瞬間撤單。
 
-### 2. 物理指標：回填率 (Refill Ratio)
+### 2.回填率 (Refill Ratio)
 我們使用流體力學中的質量守恆概念來監控補充速度：
 $$\text{Refill Ratio}(t, \Delta t) = \frac{\text{New Limit Orders inflow}}{\text{Depth Consumed by Market Orders}}$$
 當此比率驟降至 1 以下並持續惡化，代表市場正從「液態」相變為「氣態/真空」，價格將不再反彈，而是發生永久性位移 (Permanent Impact)。
 
 ---
 
-## Section 2: 金融機制修正：衝擊成本的相對論 (Impact Relativity)
+## Section 2: 衝擊成本的原因 
 
 ### 1. 平方根法則的崩潰 (Breakdown of the Square Root Law)
 標準 Barra/Almgren-Chriss 模型假設：
@@ -30,7 +30,7 @@ $$I \propto \sigma \cdot \sqrt{\frac{Q}{V}}$$
 這隱含了市場是連續介質，且 $V$ (成交量) 代表真實流動性。
 
 ### 2. 流動性黑洞模型 (The Black Hole Model)
-在崩盤時，$V$ 暴增（恐慌拋售），但真實流動性 $D(t)$（LOB 深度）呈現指數衰減。
+在崩盤時， $V$ 暴增（恐慌拋售），但真實流動性 $D(t)$（LOB 深度）呈現指數衰減。
 我們修正模型如下：假設 Maker 的存活率隨時間/恐慌指數呈現指數衰減 $D(x) \approx D_{0} e^{-\alpha x}$。
 
 你的滑價 (Slippage/Impact) 將不再是對數或平方根增長，而是變成**指數增長**：
