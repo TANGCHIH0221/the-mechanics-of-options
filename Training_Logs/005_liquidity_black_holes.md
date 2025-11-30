@@ -30,7 +30,7 @@ $$I \propto \sigma \cdot \sqrt{\frac{Q}{V}}$$
 這隱含了市場是連續介質，且 $V$ (成交量) 代表真實流動性。
 
 ### 2. 流動性黑洞模型 (The Black Hole Model)
-在崩盤時，$V$ 暴增（恐慌拋售），但真實流動性 $D(t)$（LOB 深度）呈現指數衰減。我們修正模型如下：假設 Maker 的存活率隨時間/恐慌指數呈現指數衰減 $D(x) \approx D_{0} e^{-\alpha x}$。
+在崩盤時， $V$ 暴增（恐慌拋售），但真實流動性 $D(t)$（LOB 深度）呈現指數衰減。我們修正模型如下：假設 Maker 的存活率隨時間/恐慌指數呈現指數衰減 $D(x) \approx D_{0} e^{-\alpha x}$。
 
 你的滑價 (Slippage/Impact) 將不再是對數或平方根增長，而是變成**指數增長**：
 $$\text{Impact} \approx \int_{0}^{Q} \frac{1}{D(q)} dq \approx \int_{0}^{Q} \frac{1}{D_{0}e^{-\alpha q}} dq$$
