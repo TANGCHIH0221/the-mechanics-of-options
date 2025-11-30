@@ -88,7 +88,7 @@
     * **重點：** 流動性黑洞、衝擊奇異點 (Impact Singularity)、市價停損的負期望發散、以及逆轉熵值的 Maker 行為。 
 
 
----Training_Logs/005_liquidity_black_holes.md
+---
 
 ### Module 2：希臘字母的流體力學 (Advanced Greeks)
 
