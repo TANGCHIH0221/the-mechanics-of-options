@@ -51,7 +51,7 @@ $$\underbrace{d(\Delta_{Hedge})}_{\text{MM Trading Flow}} = - \underbrace{\Gamma
 * **物理結論:** 造市商的交易流 (Force) 與價格位移 ($dS$) 方向永遠相反，且大小正比於 Gamma。
 * 當 $\Gamma \to \infty$ (如前述)，回復力 $F \to \infty$。這就是為什麼價格會被「死死釘在」Strike 上。
 
-## Section 3: The Trap & Strategy (風險的相對論)
+## Section 3: The Trap & Strategy 
 
 **關鍵認知：市場結構決定風險型態 (Boundary Conditions matter)。**
 
