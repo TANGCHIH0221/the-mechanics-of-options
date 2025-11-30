@@ -51,21 +51,6 @@
 
 這些不是為了華麗比喻，而是用來**建立可重複的直覺與決策框架**。
 
----
-##  Field Guide: The Physical Operators (Greeks Reimagined)
-
-在實戰中，我將標準希臘字母視為物理系統中的**算符 (Operators)**。
-以下速查表修正了傳統教科書的靜態觀點，重點關注 $T \to 0$ 的奇異點行為與高階交互作用：
-
-| Operator (Greek) | 物理定義 (BSM 視角) | 時間尺度 ($T$) | 波動率尺度 ($\sigma$) | 空間分佈 (Moneyness) |
-| :--- | :--- | :--- | :--- | :--- |
-| **Delta ($\Delta$)** | **Velocity (速度)**<br>$N(d_1)$ | **Step Function**<br>$T \to 0$ 時二元化 (0 或 1) | **Smoothing**<br>$\sigma \uparrow$ 使曲線變平緩 | ATM $\approx$ 0.5 |
-| **Gamma ($\Gamma$)** | **Curvature**<br>$\frac{\partial^2 C}{\partial S^2}$ | **Singularity**<br>$\propto \frac{1}{\sqrt{T}}$ (**反比**)<br>快到期時 ATM 爆炸 | **Concentration**<br>$\propto \frac{1}{\sigma}$ (**反比**)<br>低波時能量更集中 | **ATM 最大**<br>向兩側迅速衰減 |
-| **Theta ($\Theta$)** | **Entropy (熵增)**<br>$\frac{\partial C}{\partial t}$ | **Acceleration**<br>$\propto \frac{1}{\sqrt{T}}$ (**反比**)<br>最後 30 天加速腐爛 | **Cost of Convexity**<br>$\propto \sigma$ (**正比**)<br>波動越大，租金越貴 | **ATM 最大** (絕對值)<br>OTM 衰減較慢 |
-| **Vega ($\nu$)** | **Temperature Sensitivity**<br>$\frac{\partial C}{\partial \sigma}$ | **Time Weight**<br>$\propto \sqrt{T}$ (**正比**)<br>遠月對 Vol 最敏感 | **Complex**<br>$\sigma$ 改變鐘形曲線寬度 | **ATM 最大**<br>深 ITM/OTM 趨近 0 |
-| **Vanna** | **Slope of Vega (斜率流)**<br>$\frac{\partial \Delta}{\partial \sigma} = \frac{\partial \nu}{\partial S}$ | **Flow**<br>$\propto \sqrt{T}$ (不顯著)<br>隨時間穩定 | **Complex**<br>主要影響 Skew 的斜率 | **ATM $\approx$ 0**<br>**Wings (OTM/ITM) 最大** |
-| **Vomma** | **Vol Convexity (波動凸性)**<br>$\frac{\partial^2 C}{\partial \sigma^2}$ | **Long Duration**<br>$\propto T$ (**強正比**)<br>長天期才有大 Vomma | **Inverse**<br>低波時 Vomma 較大 | **ATM 最大** |
-> **Physics Note:** 注意 $\Gamma$ 與 $\Theta$ 的對稱性 ($\Theta \approx -\frac{1}{2}\sigma^2 S^2 \Gamma$)。這代表在物理上，我們無法創造能量，只能在「時間耗損」與「價格凸性」之間進行交換。
 
 ---
 
@@ -141,6 +126,23 @@
 - * [x] **[Ratio Backspreads](Training_Logs/018_ratio_backspread.md)**
     * **重點：**  Ratio Backspread 的死亡谷 (Valley of Death)、Theta–Gamma 對抗、Gamma Flip 相變點、BEP 主方程、Skew Flattening 對 Weighted Vega 的反殺、以及高峰度 (Kurtosis) 在凸性策略中的關鍵角色。。
      
+
+---
+
+##  Field Guide: The Physical Operators (Greeks Reimagined)
+
+在實戰中，我將標準希臘字母視為物理系統中的**算符 (Operators)**。
+以下速查表修正了傳統教科書的靜態觀點，重點關注 $T \to 0$ 的奇異點行為與高階交互作用：
+
+| Operator (Greek) | 物理定義 (BSM 視角) | 時間尺度 ($T$) | 波動率尺度 ($\sigma$) | 空間分佈 (Moneyness) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Delta ($\Delta$)** | **Velocity (速度)**<br>$N(d_1)$ | **Step Function**<br>$T \to 0$ 時二元化 (0 或 1) | **Smoothing**<br>$\sigma \uparrow$ 使曲線變平緩 | ATM $\approx$ 0.5 |
+| **Gamma ($\Gamma$)** | **Curvature**<br>$\frac{\partial^2 C}{\partial S^2}$ | **Singularity**<br>$\propto \frac{1}{\sqrt{T}}$ (**反比**)<br>快到期時 ATM 爆炸 | **Concentration**<br>$\propto \frac{1}{\sigma}$ (**反比**)<br>低波時能量更集中 | **ATM 最大**<br>向兩側迅速衰減 |
+| **Theta ($\Theta$)** | **Entropy (熵增)**<br>$\frac{\partial C}{\partial t}$ | **Acceleration**<br>$\propto \frac{1}{\sqrt{T}}$ (**反比**)<br>最後 30 天加速腐爛 | **Cost of Convexity**<br>$\propto \sigma$ (**正比**)<br>波動越大，租金越貴 | **ATM 最大** (絕對值)<br>OTM 衰減較慢 |
+| **Vega ($\nu$)** | **Temperature Sensitivity**<br>$\frac{\partial C}{\partial \sigma}$ | **Time Weight**<br>$\propto \sqrt{T}$ (**正比**)<br>遠月對 Vol 最敏感 | **Complex**<br>$\sigma$ 改變鐘形曲線寬度 | **ATM 最大**<br>深 ITM/OTM 趨近 0 |
+| **Vanna** | **Slope of Vega (斜率流)**<br>$\frac{\partial \Delta}{\partial \sigma} = \frac{\partial \nu}{\partial S}$ | **Flow**<br>$\propto \sqrt{T}$ (不顯著)<br>隨時間穩定 | **Complex**<br>主要影響 Skew 的斜率 | **ATM $\approx$ 0**<br>**Wings (OTM/ITM) 最大** |
+| **Vomma** | **Vol Convexity (波動凸性)**<br>$\frac{\partial^2 C}{\partial \sigma^2}$ | **Long Duration**<br>$\propto T$ (**強正比**)<br>長天期才有大 Vomma | **Inverse**<br>低波時 Vomma 較大 | **ATM 最大** |
+> **Physics Note:** 注意 $\Gamma$ 與 $\Theta$ 的對稱性 ($\Theta \approx -\frac{1}{2}\sigma^2 S^2 \Gamma$)。這代表在物理上，我們無法創造能量，只能在「時間耗損」與「價格凸性」之間進行交換。
 
 ---
 
