@@ -98,7 +98,7 @@
 - **討論問題**：
 -   * [x] **[ 期限結構與 Charm](Training_Logs/002_Term_Structure_and_Calendars.md)**
     * **重點：** 遠期波動率 (Forward Vol) 的能量守恆、Calendar Spread 的 Gamma 陷阱、以及週末的 Charm 效應。
--   * [x] **[Vomma：波動率的慣性與凸性陷阱](Training_Logs/008_Vol_of_vol.md)**
+-   * [x] **[波動率的慣性與凸性陷阱](Training_Logs/008_Vol_of_vol.md)**
     * **重點：** 當波動率 ($\sigma$) 激增時，Vomma 導致空頭部位的慣性呈現指數級放大（凸性陷阱）；利用 $\mathcal{V} \approx \Gamma S^2 \tau$ 證明長天期選擇權本質上是時間槓桿化後的 Vol-of-Vol 賭注。
 
 ---
@@ -111,7 +111,7 @@
 - **討論問題**：
 -  * [x] **[波動率曲面動態與結構化偏斜](Training_Logs/001_Vol_Dynamics_and_Skew.md)**
     * **重點：** 崩盤時的 Sticky Strike 識別、Vanna 陷阱、以及 1x2 Ratio Spread 的 Gamma Flip 風險。
--  * [x] **[波動率錐：均值回歸幾何學與相變](Training_Logs/012_volatility_cones.md)**
+-  * [x] **[均值回歸幾何學與相變](Training_Logs/012_volatility_cones.md)**
     * **重點：** Vol Cone 的無條件分佈偏差、Vol-of-Vol 的二階加速度訊號、Range-based 高熵估計量的必要性、跳躍分佈的條件化校正，以及 Earnings Regime 下必須以 Dual Cones 避免 Short Vol 的錯誤勝率評估。
 
 
