@@ -39,7 +39,7 @@ $$\sigma_{GK}^2 = \frac{1}{2} \left( \ln \frac{H_t}{L_t} \right)^2 - (2\ln 2 - 1
 
 ---
 
-## Section 3: 策略陷阱：事件視界 (The Event Horizon)
+## Section 3: 策略陷阱
 
 ### 1. 疊加態的謬誤 (Fallacy of Superposition)
 傳統 Vol Cone 是基於歷史數據構建的 **「無條件分佈 (Unconditional Distribution)」**，它錯誤地混合了兩種截然不同的物理狀態：
