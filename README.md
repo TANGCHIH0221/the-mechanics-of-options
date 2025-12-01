@@ -103,7 +103,7 @@
 
 ---
 
-### Module 3：恐懼的幾何形狀 (Volatility Surface)
+### Module 3：波動率曲面幾何 (Vol Surface Geometry)
 
 - **研究重點**：  
   - 期限結構（Term Structure）與微笑曲線（Skew / Smile）的變形  
@@ -111,6 +111,8 @@
 - **討論問題**：
 -  * [x] **[波動率曲面動態與結構化偏斜](Training_Logs/001_Vol_Dynamics_and_Skew.md)**
     * **重點：** 崩盤時的 Sticky Strike 識別、Vanna 陷阱、以及 1x2 Ratio Spread 的 Gamma Flip 風險。
+-  * [x] **[波動率錐：均值回歸幾何學與相變](Training_Logs/012_volatility_cones.md)**
+    * **重點：** Vol Cone 的無條件分佈偏差、Vol-of-Vol 的二階加速度訊號、Range-based 高熵估計量的必要性、跳躍分佈的條件化校正，以及 Earnings Regime 下必須以 Dual Cones 避免 Short Vol 的錯誤勝率評估。
 
 
 
