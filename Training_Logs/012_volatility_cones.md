@@ -51,6 +51,7 @@ $$\sigma_{GK}^2 = \frac{1}{2} \left( \ln \frac{H_t}{L_t} \right)^2 - (2\ln 2 - 1
 
 **正確的定價模型：擴散 + 跳躍**
 我們必須將總變異數分解，不能直接混用：
+
 $$\text{Total Variance} \approx \underbrace{\sigma_{diff}^2 \times T}_{\text{Diffusion Part}} + \underbrace{E[J^2]}_{\text{Jump Part}}$$
 
 ### 3. 雙軌錐體對策 (Dual Cones Strategy)
