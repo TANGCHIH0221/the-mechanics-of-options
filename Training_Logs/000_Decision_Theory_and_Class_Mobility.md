@@ -1,6 +1,6 @@
 # 射龍門賽局與階級流動的物理學 (The Physics of Decision Theory)
 
-* **Date:** 2025-11-28
+
 * **Source Inspiration:** JIM (Threads)
 * **Focus:** 市場微觀結構中的賽局理論、Alpha 衰變、以及為何「不冒險」是物理學上最大的風險。
 
