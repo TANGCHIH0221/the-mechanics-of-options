@@ -70,11 +70,37 @@ $$\Gamma_{ATM} \approx \frac{1}{S \sigma \sqrt{2\pi T}}$$
 * **後果：** 即使股價只有微小的擾動，Delta 也會從 0 瞬間跳變為 $\pm 1$。你的部位在「毫無感覺」與「瞬間死亡」之間切換，無法進行有效的動態避險。
 
 ### 實戰對策
-1. **Defined Risk:** 絕不在低波動率、短到期日的情況下裸賣 Gamma。使用 **Iron Fly (鐵蝴蝶)** 鎖住兩翼，將無限的 Gamma 風險轉化為有限的 Vega 損失。
+**Defined Risk:** 絕不在低波動率、短到期日的情況下裸賣 Gamma。使用 **Iron Fly (鐵蝴蝶)** 鎖住兩翼，將無限的 Gamma 風險轉化為有限的 Vega 損失。
 2. **Calendar Spreads:** 利用 $v_{event}$ 在近月與遠月的差異。賣出近月 (高 IV, 吸收 Crush)，買入遠月 (低 IV, 保留 Gamma)。
 
 ---
+#### 1. 物理直覺：鐘形曲線的幾何變形
+我們可以用 ASCII 圖來直觀感受事件前後，機率分佈形狀的劇烈變化及其對曲率 (Gamma) 的影響。
 
+* **事件前 (Pre-Event)：高 IV (能量高) $\rightarrow$ 平寬分佈**
+    市場預期巨大的潛在移動範圍。頂部的曲率平緩。
+    ```text
+          _ - - _
+       /           \
+      /             \
+    _/               \_
+    ```
+    > **物理狀態：** 曲率小 $\rightarrow$ **Gamma 低**。
+    > **交易解讀：** 做空 Gamma (Short Straddle) 在此時相對安全，因為價格變動對 Delta 的影響較小。
+
+* **事件後 (Post-Event)：IV Crush (能量釋放) $\rightarrow$ 窄尖分佈**
+    不確定性坍縮。分佈瞬間變成一根「針」。頂部的曲率極度尖銳。
+    ```text
+           /\
+          /  \
+         /    \
+        /      \
+    ___/        \___
+    ```
+    > **物理狀態：** 曲率極大化 $\rightarrow$ **Gamma 爆炸**。
+    > **交易解讀：** 做空 Gamma 等於自殺。任何微小的價格擾動都會導致 Delta 在 $\pm 1$ 之間劇烈跳動。
+
+---
 ## Section 4: Python Lab Concept
 
 ```python
