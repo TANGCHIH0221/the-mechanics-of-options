@@ -74,7 +74,7 @@ $$\Gamma_{ATM} \approx \frac{1}{S \sigma \sqrt{2\pi T}}$$
 2. **Calendar Spreads:** 利用 $v_{event}$ 在近月與遠月的差異。賣出近月 (高 IV, 吸收 Crush)，買入遠月 (低 IV, 保留 Gamma)。
 
 ---
-#### 1. 物理直覺：鐘形曲線的幾何變形
+####  物理直覺：鐘形曲線的幾何變形
 我們可以用 ASCII 圖來直觀感受事件前後，機率分佈形狀的劇烈變化及其對曲率 (Gamma) 的影響。
 
 * **事件前 (Pre-Event)：高 IV (能量高) $\rightarrow$ 平寬分佈**
