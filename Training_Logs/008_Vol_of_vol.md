@@ -1,6 +1,6 @@
 #  Vomma (Vol of Vol) —— 波動率的慣性與凸性陷阱
 
-* **Date:** 2025-11-29
+
 * **Focus:** 二階希臘字母 Vomma 的物理意義、Black-Scholes 的時空對稱性 ($\mathcal{V} \leftrightarrow \Gamma$)，以及在極端行情下的凸性陷阱 (Convexity Trap)。
 
 ---
