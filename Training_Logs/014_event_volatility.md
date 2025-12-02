@@ -35,7 +35,7 @@ $$\text{TotalVar}(T) = \int_0^T \sigma^2(t) dt = \sigma_{diff}^2 T + v_E$$
 市場報價的隱含波動率 (IV, $\sigma_{IV}$) 是將上述總能量平均分攤到整個時間段的結果：
 $$\sigma_{IV}^2(T) \cdot T = \sigma_{diff}^2 T + v_E$$
 
-### 實戰解算：期限結構聯立求解
+### 期限結構聯立求解
 為了將 $v_E$ (事件能量) 從背景雜訊中分離，我們利用期限結構 (Term Structure) 建立聯立方程式。假設 $T_1$ (近月) 與 $T_2$ (次月) 皆包含該事件：
 
 1. **系統方程組：**
@@ -78,7 +78,7 @@ $$\Gamma_{ATM} \approx \frac{1}{S \sigma \sqrt{2\pi T}}$$
 我們使用圖表來精確展示 IV Crush 前後，機率密度函數 (PDF) 的形狀變化如何導致 Gamma 的物理相變。
 
 <div align="center">
-  <img src="images/pgamma.png" width="90%" alt="Gamma Regimes Comparison">
+  <img src="../images/pgamma.png" width="90%" alt="Gamma Regimes Comparison">
 </div>
 
 > **物理狀態解讀：**
