@@ -113,6 +113,8 @@
     * **重點：** 崩盤時的 Sticky Strike 識別、Vanna 陷阱、以及 1x2 Ratio Spread 的 Gamma Flip 風險。
 -  * [x] **[均值回歸幾何學與相變](Training_Logs/012_volatility_cones.md)**
     * **重點：** Vol Cone 的無條件分佈偏差、Vol-of-Vol 的二階加速度訊號、Range-based 高熵估計量的必要性、跳躍分佈的條件化校正，以及 Earnings Regime 下必須以 Dual Cones 避免 Short Vol 的錯誤勝率評估。
+-  * [x] **[Event Volatility](Training_Logs/014_event_volatility.md)**
+    * **重點：** 利用 Dirac Delta 函數建模從總變異數中剝離事件波動率 (Event Variance Extraction)、理解波函數坍縮 (IV Crush) 的物理機制，以及低波動率環境下的 Gamma 奇異點風險。
 
 
 
