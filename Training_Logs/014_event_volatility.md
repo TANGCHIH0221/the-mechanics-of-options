@@ -75,30 +75,10 @@ $$\Gamma_{ATM} \approx \frac{1}{S \sigma \sqrt{2\pi T}}$$
 
 ---
 ####  物理直覺：鐘形曲線的幾何變形
-我們可以用 ASCII 圖來直觀感受事件前後，機率分佈形狀的劇烈變化及其對曲率 (Gamma) 的影響。
+<div align="center">
+  <img src="images/pgamma.png" width="90%" alt="Gamma Regimes Comparison">
+</div>
 
-* **事件前 (Pre-Event)：高 IV (能量高) $\rightarrow$ 平寬分佈**
-    市場預期巨大的潛在移動範圍。頂部的曲率平緩。
-    ```text
-          _ - - _
-       /           \
-      /             \
-    _/               \_
-    ```
-    > **物理狀態：** 曲率小 $\rightarrow$ **Gamma 低**。
-    > **交易解讀：** 做空 Gamma (Short Straddle) 在此時相對安全，因為價格變動對 Delta 的影響較小。
-
-* **事件後 (Post-Event)：IV Crush (能量釋放) $\rightarrow$ 窄尖分佈**
-    不確定性坍縮。分佈瞬間變成一根「針」。頂部的曲率極度尖銳。
-    ```text
-           /\
-          /  \
-         /    \
-        /      \
-    ___/        \___
-    ```
-    > **物理狀態：** 曲率極大化 $\rightarrow$ **Gamma 爆炸**。
-    > **交易解讀：** 做空 Gamma 等於自殺。任何微小的價格擾動都會導致 Delta 在 $\pm 1$ 之間劇烈跳動。
 
 ---
 ## Section 4: Python Lab Concept
