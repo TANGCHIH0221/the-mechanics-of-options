@@ -75,9 +75,15 @@ $$\Gamma_{ATM} \approx \frac{1}{S \sigma \sqrt{2\pi T}}$$
 
 ---
 ####  物理直覺：鐘形曲線的幾何變形
+我們使用圖表來精確展示 IV Crush 前後，機率密度函數 (PDF) 的形狀變化如何導致 Gamma 的物理相變。
+
 <div align="center">
   <img src="images/pgamma.png" width="90%" alt="Gamma Regimes Comparison">
 </div>
+
+> **物理狀態解讀：**
+> * **左圖 (Pre-Event)：** 能量分散。曲線頂部平坦，曲率 (Gamma) 低。做空是安全的。
+> * **右圖 (Post-Event)：** 能量坍縮至奇異點。曲線變成了「針」，頂部曲率極大化。做空 Gamma 等於暴露在無限大的瞬時風險中。
 
 
 ---
