@@ -39,6 +39,7 @@ $$\sigma_{IV}^2(T) \cdot T = \sigma_{diff}^2 T + v_E$$
 為了將 $v_E$ (事件能量) 從背景雜訊中分離，我們利用期限結構 (Term Structure) 建立聯立方程式。假設 $T_1$ (近月) 與 $T_2$ (次月) 皆包含該事件：
 
 1. **系統方程組：**
+
 $$
 \begin{cases}
 \sigma_{1}^2 T_{1} = \sigma_{diff}^2 T_{1} + v_E \\
@@ -62,7 +63,7 @@ $$\text{Implied Event Move} \approx \sqrt{v_{event}}$$
 ## Section 3: 陷阱與對策 (The Trap & Strategy)
 
 ### 低波動率的奇異點 (The Low Vol Singularity)
-新手常犯的錯誤是在 IV Crush 後持有 ATM Short Straddle，認為「波動率低 = 安全」。
+常犯的錯誤是在 IV Crush 後持有 ATM Short Straddle，認為「波動率低 = 安全」。
 * **物理事實：** Gamma ($\Gamma$) 與波動率 ($\sigma$) 成反比。
 $$\Gamma_{ATM} \approx \frac{1}{S \sigma \sqrt{2\pi T}}$$
 * **危險機制：** 當 $\sigma \to 0$ 且 $T \to 0$ 時，鐘形曲線變得極度尖銳 (High Kurtosis)。Gamma 趨近於 **Dirac Delta Function**。
