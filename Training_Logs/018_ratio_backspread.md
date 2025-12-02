@@ -1,6 +1,6 @@
 #  Ratio Backspreads
 
-* **Date:** 2025-11-28
+
 * **Focus:** 利用凸性 (Convexity) 捕捉極端行情的逃逸速度計算，以及波動率阻尼 (Vol Dampening) 對 Long Vega 策略的影響。
 
 ## Section 1: The Physics (逃逸速度與相變)
