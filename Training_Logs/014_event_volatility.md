@@ -1,4 +1,4 @@
-#  Event Volatility (事件波動率：波函數坍縮計算)
+#  Event Volatility 
 
 
 * **Focus:** 利用 Dirac Delta 函數建模從總變異數中剝離事件波動率 (Event Variance Extraction)、理解波函數坍縮 (IV Crush) 的物理機制，以及低波動率環境下的 Gamma 奇異點風險。
