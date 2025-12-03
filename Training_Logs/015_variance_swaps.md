@@ -42,7 +42,7 @@ $$d(\ln S_t) = \left( (r-q) - \frac{1}{2}\sigma_t^2 \right) dt + \sigma_t dW_t$$
 $$\frac{1}{2}\sigma_t^2 dt = (r-q)dt - d(\ln S_t) + \sigma_t dW_t$$
 
 對區間 $[0, T]$ 積分並取期望值 (Risk-Neutral Expectation)，其中 Martingale 項 $\mathbb{E}[\int \sigma dW] = 0$：
-$$\mathbb{E}\left[ \int_0^T \sigma_t^2 dt \right] = 2 \left( (r-q)T - \mathbb{E}\left[ \ln \frac{S_T}{S_0} \right] \right)$$
+$$\mathbb{E} \left[ \int_0^T \sigma_t^2 dt \right] = 2 \left( (r-q)T - \mathbb{E}\left[ \ln \frac{S_T}{S_0} \right] \right)$$
 
 **物理意義：** 實現變異數 (Realized Variance) 等價於「持有 Log Contract 的負 payoff」加上一個漂移項。
 
