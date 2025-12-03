@@ -19,8 +19,8 @@ Variance Swap 的本質是對波動率的平方 ($\sigma^2$) 進行交易。這�
 * **指數級增長 (Var Swap):** Payoff $\propto (\sigma_{realized}^2 - K_{var}^2)$。
 
 當市場恐慌爆發，波動率從 $20\%$ 飆升至 $60\%$：
-* Vol Swap 獲利：$3$ 倍增長。
-* Var Swap 獲利：$3^2 = 9$ 倍增長。
+* Vol Swap 獲利： $3$ 倍增長。
+* Var Swap 獲利： $3^2 = 9$ 倍增長。
 這種**二階導數 ($d\sigma^2/d\sigma = 2\sigma$)** 意味著波動率越高，PnL 的加速度越快。對於 Short 方而言，這是致命的「正反饋迴路」。
 
 ---
@@ -44,7 +44,7 @@ $$\frac{1}{2}\sigma_t^2 dt = (r-q)dt - d(\ln S_t) + \sigma_t dW_t$$
 對區間 $[0, T]$ 積分並取期望值 (Risk-Neutral Expectation)，其中 Martingale 項 $\mathbb{E}[\int \sigma dW] = 0$：
 
 $$
-\mathbb{E} \left[ \int_0^T \sigma_t^2 \, dt \right] = 2 \left( (r-q)T - \mathbb{E} \left[ \ln \frac{S_T}{S_0} \right] \right)
+\mathbb{E} \left[ \displaystyle \int_0^T \sigma_t^2 \, dt \right] = 2 \left( (r-q)T - \mathbb{E} \left[ \ln \frac{S_T}{S_0} \right] \right)
 $$
 
 **物理意義：** 實現變異數 (Realized Variance) 等價於「持有 Log Contract 的負 payoff」加上一個漂移項。
