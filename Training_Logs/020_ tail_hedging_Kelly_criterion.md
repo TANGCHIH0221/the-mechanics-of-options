@@ -42,8 +42,8 @@ Tail Hedge（Long Vol）本質上是一個反人性的策略，因為它要求�
 $$\text{Time Average} \neq \text{Ensemble Average}$$
 * **Ensemble Avg (系綜平均):** 平行宇宙的期望值。 $E[\log W_t]$ 看起來很美好。
 * **Time Avg (時間平均):** 現實中你只有一條命。
-* **Jensen 不等式：** 由於 $\log$ 函數的凹性 (Concavity)，$E[\log(1+fX)] < \log(1+f E[X])$。波動率越高，兩者差距（Volatility Tax）越大。
-* **結論：** 在肥尾分佈中，$\Pr(1+fX < 0) > 0$。只要這個機率不為零，Full Kelly 的時間平均財富將必然收斂至 0。
+* **Jensen 不等式：** 由於 $\log$ 函數的凹性 (Concavity)， $E[\log(1+fX)] < \log(1+f E[X])$。波動率越高，兩者差距（Volatility Tax）越大。
+* **結論：** 在肥尾分佈中， $\Pr(1+fX < 0) > 0$。只要這個機率不為零，Full Kelly 的時間平均財富將必然收斂至 0。
 
 ### 2.3 參數不確定性的一階不穩定性
 Full Kelly 公式 $f^* = \frac{p(b+1)-1}{b}$ 對參數 $p$ (勝率) 和 $b$ (賠率) 極度敏感。
@@ -83,11 +83,11 @@ $$a_t = \frac{d^2 S_t}{dt^2}$$
 ### 3.2 三段式實戰流程 (The 3-Step Protocol)
 
 **Step 1: Crash Regime Detection (HODL)**
-* 檢查：$a_t$ 是否仍為負？VVIX 是否飆升？流動性是否破裂？
+* 檢查： $a_t$ 是否仍為負？VVIX 是否飆升？流動性是否破裂？
 * 行動：若任一條件成立，**死都不賣**。享受 Gamma 爆炸的紅利。
 
 **Step 2: Phase Transition Entry (Partial Monetize)**
-* 觸發：$a_t$ 收斂 + VVIX 下彎 + Order Book 回復。
+* 觸發： $a_t$ 收斂 + VVIX 下彎 + Order Book 回復。
 * 行動：分批平倉 30-50% 的避險部位。
 * 戰術：執行 **Roll Down**，賣出高 Delta ITM Put，換入低 Delta OTM Put，鎖定現金並重置凸性。
 
