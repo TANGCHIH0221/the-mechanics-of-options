@@ -11,7 +11,7 @@
 
 ### 1. 無限深位能井 (Short Straddle)
 * **物理模型:**這是一個 **開放邊界 (Open Boundary)** 系統。
-    * 你建立了一個引力場 (Short Gamma)，試圖將粒子拉回原點。
+    * 建立了一個引力場 (Short Gamma)，試圖將粒子拉回原點。
     * **風險特徵:** 粒子一旦獲得足夠動能 ($dS$ 夠大) 逃逸，系統能量損失趨近於無限。沒有牆壁可以吸收衝擊。
 * **對沖動力學 (Hedging Dynamics):**
     * $\Gamma_{total} \ll 0$ 恆成立。
@@ -61,7 +61,7 @@ $$\text{Iron Butterfly} \approx \underbrace{\text{Short Straddle}}_{\text{Short 
 ## Section 3: 陷阱與對策：Skew 的定價陷阱
 
 ### 場景：財報後的假象 (The Earnings Trap)
-你構建了 IB 賭財報，結果：
+構建了 IB 賭財報，結果：
 1.  **Price:** Perfect Pin at ATM.
 2.  **ATM Vol:** Crushed (VIX drop).
 3.  **Result:** **PnL 不如預期，甚至虧損。**
