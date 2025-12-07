@@ -132,8 +132,9 @@
   - 分析各種策略的 failure modes（失效模式）
 - **討論問題**：
 - * [x] **[Ratio Backspreads](Training_Logs/018_ratio_backspread.md)**
-    * **重點：**  Ratio Backspread 的死亡谷 (Valley of Death)、Theta–Gamma 對抗、Gamma Flip 相變點、BEP 主方程、Skew Flattening 對 Weighted Vega 的反殺、以及高峰度 (Kurtosis) 在凸性策略中的關鍵角色。。
-     
+    * **重點：**  Ratio Backspread 的死亡谷 (Valley of Death)、Theta–Gamma 對抗、Gamma Flip 相變點、BEP 主方程、Skew Flattening 對 Weighted Vega 的反殺、以及高峰度 (Kurtosis) 在凸性策略中的關鍵角色。
+- * [x] **[Iron Butterfly vs. Straddle — 峰度交易與幾何陷阱](Training_Logs/019_iron_butterfly_vs_straddl.md)**
+    * **重點：**  解析 Short Straddle 與 Iron Butterfly 的物理本質差異，識別 Gamma 反轉點 (Gamma Flip) 的對沖變奏，以及量化 Skew 形狀對結構化策略的損益歸因。 
 
 ---
 
