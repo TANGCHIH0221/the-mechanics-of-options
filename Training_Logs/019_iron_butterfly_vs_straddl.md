@@ -78,9 +78,9 @@ $$PnL \approx \underbrace{(\text{Short Vega}_{ATM} \times \text{Crush})}_{\text{
 ### 真正的死因：買在山頂 (Buying the Top of the Skew)
 Iron Butterfly 的陷阱不在於出場，而在於 **進場 (Entry)**。
 * **情境:** 財報前，市場極度恐慌，Skew Percentile > 90% (OTM 非常貴)。
-* **邏輯:** 你雖然賣了很貴的 ATM，但你也被迫用「史上最貴的價格」去買 OTM 保險。
-* **Edge Calculation:** $$\text{Edge} = \text{ATM Premium}_{\text{sold}} - \text{OTM Premium}_{\text{bought}}$$
-    當 OTM 太貴時，你的 Edge 被壓縮至零。
+* **邏輯:** 雖然賣了很貴的 ATM，但你也被迫用「史上最貴的價格」去買 OTM 保險。
+* **Edge Calculation:**  $$\text{Edge} = \text{ATM Premium}_{\text{sold}} - \text{OTM Premium}_{\text{bought}}$$
+    當 OTM 太貴時， Edge 被壓縮至零。
 
 > **The Protocol:** 當 Skew 異常陡峭時，**禁止使用 Iron Butterfly**。此時應轉為 **Short Straddle** (接受無限風險以換取 Edge) 或 **Ratio Spreads** (賣出更多昂貴的 OTM)。永遠不要在保險費率最高的時候買保險。
 
