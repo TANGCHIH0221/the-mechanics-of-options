@@ -118,6 +118,7 @@
 -  * [x] **[Event Volatility](Training_Logs/014_event_volatility.md)**
     * **重點：** 利用 Dirac Delta 函數建模從總變異數中剝離事件波動率 (Event Variance Extraction)、理解波函數坍縮 (IV Crush) 的物理機制，以及低波動率環境下的 Gamma 奇異點風險。
 
+  
 -  * [x] **[Variance Swap](Training_Logs/015_variance_swaps.md)**
     * **重點：** 從路徑依賴到路徑獨立，詳解 $1/K^2$ 權重的物理來源，以及跳空擴散下的三階項誤差分析。
 
