@@ -85,7 +85,9 @@
 -  * [x] **[ Pining Effect](Training_Logs/004_pinning_effect.md)**
     * **重點：** Gamma 重力井的狄拉克奇異點 (Dirac Delta)、動態避險的負回饋循環 、以及結算日的 Pin Risk 。
 -  * [x] **[Liquidity Black Holes](Training_Logs/005_liquidity_black_holes.md)**
-    * **重點：** 流動性黑洞、衝擊奇異點 (Impact Singularity)、市價停損的負期望發散、以及逆轉熵值的 Maker 行為。 
+    * **重點：** 流動性黑洞、衝擊奇異點 (Impact Singularity)、市價停損的負期望發散、以及逆轉熵值的 Maker 行為。
+-  * [x] **[Liquidity Black Holes](Training_Logs/006_vanna_flow.md)**
+    * **重點：** 識別 Dealer 避險引發的機械式崩盤 (Mechanical Crash)、建立耦合微分方程模型 (Coupled PDE)、以及利用「相變點」判定 Vanna 熄火 (Burnout)。 
 
 
 ---
