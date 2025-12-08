@@ -81,6 +81,7 @@ $$
 
 ### 2. 自動做空的物理機制
 由於 $T_{short} \ll T_{long}$，則 $\frac{1}{T_{short}} \gg \frac{1}{T_{long}}$，導致：
+
 $$
 Color_{net} \ll 0 \quad (\text{Deeply Negative})
 $$
