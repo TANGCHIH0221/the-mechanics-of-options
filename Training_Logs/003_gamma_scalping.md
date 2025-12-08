@@ -81,7 +81,7 @@ $$
 
 ---
 
-## Section 4: Python Lab Concept (虛擬程式碼)
+## Section 4: Python Lab Concept 
 
 *模擬：比較「震盪」與「趨勢」兩條路徑對 Gamma PnL 的影響*
 
