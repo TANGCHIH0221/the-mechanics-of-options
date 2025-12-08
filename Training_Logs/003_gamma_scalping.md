@@ -1,4 +1,4 @@
-#  Gamma Scalping - 動態避險與能量轉換
+# Gamma Scalping - 動態避險與能量轉換
 
 
 * **Focus:** 將市場的隨機震盪轉化為已實現獲利 (PnL)。理解 Gamma Scalping 的熱力學本質：對抗時間熵增 (Theta) 的做功過程。
@@ -15,11 +15,13 @@
 ### 2. 訊號與雜訊 (Signal vs. Noise)
 在微觀尺度下，價格變動 $dS$ 包含兩部分：訊號 (Signal/Trend) 與微觀雜訊 (Microstructure Noise)。
 
-* **Time-based Hedging (時間驅動的謬誤):** * 若設定 $\Delta t \to 0$ (例如每分鐘避險)，你實際上是在對 **High Frequency Noise** 進行採樣。
+* **Time-based Hedging (時間驅動的謬誤):**
+    * 若設定 $\Delta t \to 0$ (例如每分鐘避險)，你實際上是在對 **High Frequency Noise** 進行採樣。
     * **物理後果：** 當價格波動小於 Bid-Ask Spread 時，你是在對抗摩擦力做虛功。你的 Gamma PnL (來自微小的 $\Delta S$) 遠小於你的交易成本 (Spread + Commission)。
     * **結局：** 「千刀萬剮 (Death by a thousand cuts)」。
 
-* **Move-based Hedging (位移驅動的優勢):** * 設定一個 **位能障壁 (Potential Barrier)** (例如 $\Delta$ 偏離閾值)。
+* **Move-based Hedging (位移驅動的優勢):**
+    * 設定一個 **位能障壁 (Potential Barrier)** (例如 $\Delta$ 偏離閾值)。
     * **物理機制：** 只有當市場動能 $(\Delta S)^2$ 足夠大，能克服摩擦力 (Spread) 做功時，才觸發避險動作。
     * **結論：** 這是過濾雜訊、鎖定有效波動 (Effective Volatility) 的物理濾網。
 
@@ -28,24 +30,30 @@
 ## Section 2: 金融機制：波動率套利的本質方程
 
 ### 1. 基礎公式推導
-任何 Delta-Neutral 的 Long Option 組合，其 PnL 來源可分解為：
+任何 Delta-Neutral 的 Long Option 組合，其 PnL 來源可分解為「曲率收益」與「時間成本」：
 
-$d\Pi \approx \underbrace{\frac{1}{2}\Gamma (dS)^2}_{\text{Gamma Revenue}} + \underbrace{\Theta dt}_{\text{Theta Cost}}$
+$$
+d\Pi \approx \frac{1}{2}\Gamma (dS)^2 + \Theta dt
+$$
 
-我們將 $dS$ 替換為實際波動 ($\sigma_{realized} S dW$)，並利用 Black-Scholes PDE 關係式 
-$\Theta \approx -\frac{1}{2} \sigma_{imp}^2 S^2 \Gamma$ (忽略利率項)，可以推導出 Gamma Scalping 的**熱力學第一定律**：
+我們將 $dS$ 替換為實際波動 ($\sigma_{realized} S dW$)，並利用 Black-Scholes PDE 關係式 $\Theta \approx -\frac{1}{2} \sigma_{imp}^2 S^2 \Gamma$ (忽略利率項)，可以推導出 Gamma Scalping 的**熱力學第一定律**：
 
-$P\&L_{\text{total}} \approx \frac{1}{2} \Gamma S^2 \sigma_{realized}^2 dt - \frac{1}{2} \Gamma S^2 \sigma_{implied}^2 dt$
+$$
+PnL_{total} \approx \frac{1}{2} \Gamma S^2 \sigma_{realized}^2 dt - \frac{1}{2} \Gamma S^2 \sigma_{implied}^2 dt
+$$
 
 合併後得到核心獲利方程：
 
-$P\&L_{\text{total}} \approx \frac{1}{2} \Gamma S^2 (\sigma_{realized}^2 - \sigma_{implied}^2) dt$
+$$
+PnL_{total} \approx \frac{1}{2} \Gamma S^2 (\sigma_{realized}^2 - \sigma_{implied}^2) dt
+$$
 
 ### 2. 獲利物理學
 這個公式揭示了殘酷的真相，證明 Gamma Scalping 與方向完全無關：
 * **能量轉換效率：** 交易的本質純粹是在賭 **Realized Vol vs. Implied Vol** 的利差。
 * **Gamma 的角色：** Gamma 只是轉換係數 (Scaling Factor)。如果 $\sigma_{realized} < \sigma_{implied}$，Gamma 再大也只是放大你的虧損。
-* **操作本質 (Buy Low, Sell High)：** * 當價格上漲 $\rightarrow$ Delta 變大 $\rightarrow$ 為了中和 Delta，你必須 **賣出** 標的 (Sell High)。
+* **操作本質 (Buy Low, Sell High)：**
+    * 當價格上漲 $\rightarrow$ Delta 變大 $\rightarrow$ 為了中和 Delta，你必須 **賣出** 標的 (Sell High)。
     * 當價格下跌 $\rightarrow$ Delta 變小 $\rightarrow$ 你必須 **買入** 標的 (Buy Low)。
     * 你透過不斷的「高拋低吸」來積累微小的獲利，試圖填補 Theta 的大坑。
 
