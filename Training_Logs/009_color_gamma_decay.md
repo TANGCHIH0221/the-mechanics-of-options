@@ -87,7 +87,7 @@ Color_{net} \ll 0 \quad (\text{Deeply Negative})
 $$
 
 這意味著：
-1.  **自然漂移：** 隨著每一秒過去，$\Gamma_{net}$ 會自動從 $0$ 往 **負值 (Net Short Gamma)** 漂移。
+1.  **自然漂移：** 隨著每一秒過去， $\Gamma_{net}$ 會自動從 $0$ 往 **負值 (Net Short Gamma)** 漂移。
 2.  **強制交易：** 為了維持 Gamma Neutral，你必須不斷 **買回 (Buy to Cover)** 短期選擇權的 Short Gamma。
 3.  **隱形損耗：** 即使市場完全不動，你也被迫進行交易。你是在支付 Spread 與手續費，來對抗「時間造成的 Gamma 結構失衡」。
 
