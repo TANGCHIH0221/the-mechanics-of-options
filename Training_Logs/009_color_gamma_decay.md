@@ -28,6 +28,7 @@
 $$
 \Gamma(T) \approx \frac{1}{S \sigma \sqrt{T}} = \frac{1}{S \sigma} T^{-\frac{1}{2}}
 $$
+
 其中 $T$ 為剩餘到期時間 (Time to Maturity)。
 
 **Step A: 對剩餘時間 $T$ 微分**
