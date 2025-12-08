@@ -82,6 +82,8 @@
   - Dealer Gamma / Vega 曝險  
   - Hedging flows 對價格路徑的影響
 - **討論問題**：
+-  * [x] **[Gamma scalping](Training_Logs/003_gamma_scalping.md)**
+    * **重點：** 將市場的隨機震盪轉化為已實現獲利 (PnL)。理解 Gamma Scalping 的熱力學本質：對抗時間熵增 (Theta) 的做功過程。
 -  * [x] **[ Pining Effect](Training_Logs/004_pinning_effect.md)**
     * **重點：** Gamma 重力井的狄拉克奇異點 (Dirac Delta)、動態避險的負回饋循環 、以及結算日的 Pin Risk 。
 -  * [x] **[Liquidity Black Holes](Training_Logs/005_liquidity_black_holes.md)**
@@ -89,7 +91,7 @@
 -  * [x] **[Vanna Flow](Training_Logs/006_vanna_flow.md)**
     * **重點：** 識別 Dealer 避險引發的機械式崩盤 (Mechanical Crash)、建立耦合微分方程模型 (Coupled PDE)、以及利用「相變點」判定 Vanna 熄火 (Burnout)。 
 
-
+Training_Logs/003_gamma_scalping.md
 ---
 
 ### Module 2：希臘字母的流體力學 (Advanced Greeks)
