@@ -72,10 +72,13 @@ $$
 * **初始狀態:** $\Gamma_{net} = N_L \Gamma_L - N_S \Gamma_S = 0$
 
 隨著時間流逝 $dt$ (價格 $S$ 不動)，組合的 Net Gamma 變化率由 Net Color 決定：
+
 $$
 Color_{net} = N_L \cdot Color_L - N_S \cdot Color_S
 $$
+
 代入 $Color = \frac{\Gamma}{2T}$ 與初始條件 $N_L \Gamma_L = N_S \Gamma_S = G$：
+
 $$
 Color_{net} = G \left( \frac{1}{2T_{long}} - \frac{1}{2T_{short}} \right)
 $$
