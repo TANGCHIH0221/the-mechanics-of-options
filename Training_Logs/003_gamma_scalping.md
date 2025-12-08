@@ -30,21 +30,16 @@
 ### 1. 基礎公式推導
 任何 Delta-Neutral 的 Long Option 組合，其 PnL 來源可分解為：
 
-$
-d\Pi \approx \underbrace{\frac{1}{2}\Gamma (dS)^2}_{\text{Gamma Revenue}} + \underbrace{\Theta dt}_{\text{Theta Cost}}
-$
+$d\Pi \approx \underbrace{\frac{1}{2}\Gamma (dS)^2}_{\text{Gamma Revenue}} + \underbrace{\Theta dt}_{\text{Theta Cost}}$
 
-我們將 $dS$ 替換為實際波動 ($\sigma_{realized} S dW$)，並利用 Black-Scholes PDE 關係式 $\Theta \approx -\frac{1}{2} \sigma_{imp}^2 S^2 \Gamma$ (忽略利率項)，可以推導出 Gamma Scalping 的**熱力學第一定律**：
+我們將 $dS$ 替換為實際波動 ($\sigma_{realized} S dW$)，並利用 Black-Scholes PDE 關係式 
+$\Theta \approx -\frac{1}{2} \sigma_{imp}^2 S^2 \Gamma$ (忽略利率項)，可以推導出 Gamma Scalping 的**熱力學第一定律**：
 
-$
-P\&L_{\text{total}} \approx \frac{1}{2} \Gamma S^2 \sigma_{realized}^2 dt - \frac{1}{2} \Gamma S^2 \sigma_{implied}^2 dt
-$
+$P\&L_{\text{total}} \approx \frac{1}{2} \Gamma S^2 \sigma_{realized}^2 dt - \frac{1}{2} \Gamma S^2 \sigma_{implied}^2 dt$
 
 合併後得到核心獲利方程：
 
-$$
-P\&L_{\text{total}} \approx \frac{1}{2} \Gamma S^2 (\sigma_{realized}^2 - \sigma_{implied}^2) dt
-$$
+$P\&L_{\text{total}} \approx \frac{1}{2} \Gamma S^2 (\sigma_{realized}^2 - \sigma_{implied}^2) dt$
 
 ### 2. 獲利物理學
 這個公式揭示了殘酷的真相，證明 Gamma Scalping 與方向完全無關：
