@@ -91,7 +91,7 @@
 -  * [x] **[Vanna Flow](Training_Logs/006_vanna_flow.md)**
     * **重點：** 識別 Dealer 避險引發的機械式崩盤 (Mechanical Crash)、建立耦合微分方程模型 (Coupled PDE)、以及利用「相變點」判定 Vanna 熄火 (Burnout)。 
 
-Training_Logs/003_gamma_scalping.md
+
 ---
 
 ### Module 2：希臘字母的流體力學 (Advanced Greeks)
