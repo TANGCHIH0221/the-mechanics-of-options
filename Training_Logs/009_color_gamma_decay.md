@@ -24,24 +24,29 @@
 
 ### 1. 數學推導：從 Gamma 到 Color
 我們從 ATM Gamma 的 Black-Scholes 近似公式出發（設 $S \approx K, r=0$）：
+
 $$
 \Gamma(T) \approx \frac{1}{S \sigma \sqrt{T}} = \frac{1}{S \sigma} T^{-\frac{1}{2}}
 $$
 其中 $T$ 為剩餘到期時間 (Time to Maturity)。
 
 **Step A: 對剩餘時間 $T$ 微分**
+
 $$
 \frac{\partial \Gamma}{\partial T} = \frac{1}{S \sigma} \cdot \left(-\frac{1}{2}\right) T^{-\frac{3}{2}}
 $$
+
 $$
 \frac{\partial \Gamma}{\partial T} = -\frac{1}{2T} \cdot \underbrace{\left( \frac{1}{S \sigma \sqrt{T}} \right)}_{\Gamma} = -\frac{\Gamma}{2T}
 $$
 
 **Step B: 對日曆時間 $t$ 微分 (定義 Color)**
 由於 $T = T_{expiry} - t$，根據鏈鎖律 $\frac{dT}{dt} = -1$：
+
 $$
 Color \equiv \frac{\partial \Gamma}{\partial t} = \frac{\partial \Gamma}{\partial T} \cdot \frac{dT}{dt}
 $$
+
 $$
 Color = \left( -\frac{\Gamma}{2T} \right) \cdot (-1) = \frac{\Gamma}{2T}
 $$
