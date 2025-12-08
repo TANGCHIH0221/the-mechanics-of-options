@@ -96,7 +96,7 @@ $$
 
 ## Section 4: Python Lab Concept 
 
-*模擬：Gamma Neutral Calendar Spread 隨時間的 Gamma 漂移路徑*
+
 
 ```python
 import numpy as np
