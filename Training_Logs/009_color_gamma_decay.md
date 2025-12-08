@@ -53,6 +53,7 @@ $$
 
 ### 2. $T^{-3/2}$ 災難 (The Scale of Divergence)
 這個公式揭示了 Color 最可怕的物理性質——它的發散速度遠快於 Gamma：
+
 $$
 \text{Magnitude of Color} \propto \frac{1}{T \sqrt{T}} = T^{-3/2}
 $$
