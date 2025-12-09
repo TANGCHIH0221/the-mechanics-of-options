@@ -135,6 +135,8 @@
   - 以「物理情境」為前提設計選擇權結構  
   - 分析各種策略的 failure modes（失效模式）
 - **討論問題**：
+-   * [x] **[Dispersion trading](Training_Logs/016_dispersion_trading.md)**
+    * **重點：**  利用 Jensen 不等式捕捉市場結構的「去相干 (Decoherence)」，透過數學推導識別「骯髒相關性 (Dirty Correlation)」的定價誤區，並量化 Mark-to-Market 的流動性陷阱。
 -  * [x] **[Ratio Backspreads](Training_Logs/018_ratio_backspread.md)**
     * **重點：**  Ratio Backspread 的死亡谷 (Valley of Death)、Theta–Gamma 對抗、Gamma Flip 相變點、BEP 主方程、Skew Flattening 對 Weighted Vega 的反殺、以及高峰度 (Kurtosis) 在凸性策略中的關鍵角色。
 -  * [x] **[Iron Butterfly vs. Straddle — 峰度交易與幾何陷阱](Training_Logs/019_iron_butterfly_vs_straddl.md)**
