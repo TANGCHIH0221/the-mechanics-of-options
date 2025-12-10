@@ -31,6 +31,7 @@ $$\text{Value}_{IBF} \approx \text{Short Straddle}_{ATM} + \text{Long Strangle}_
 
 ### 1. Gamma 的「W」型結構
 不同於 Straddle 的單一倒鐘形，IBF 的 Gamma Profile 呈現複雜的符號反轉：
+
 $$\Gamma_{Net} = \Gamma_{Short}^{ATM} + \Gamma_{Long}^{Wing}$$
 
 * **Zone 1 (ATM):** $\Gamma \ll 0$ (Short Gamma 主導)。
@@ -43,8 +44,8 @@ $$\Gamma_{Net} = \Gamma_{Short}^{ATM} + \Gamma_{Long}^{Wing}$$
 $$\Gamma \propto \frac{1}{S\sigma\sqrt{T}} e^{-\frac{d_1^2}{2}}$$
 
 當價格從 ATM ($S \approx K_{ATM}$) 移向 Wing ($S \to K_{Wing}$)：
-1.  **ATM Term:** $d_1$ 變大，$e^{-d_1^2}$ 衰減至 0。
-2.  **Wing Term:** $d_1$ 接近 0，$e^{-d_1^2}$ 衝向峰值 1。
+1.  **ATM Term:** $d_1$ 變大， $e^{-d_1^2}$ 衰減至 0。
+2.  **Wing Term:** $d_1$ 接近 0， $e^{-d_1^2}$ 衝向峰值 1。
 由於指數函數的性質，這種「權力交接」不是線性的，而是呈現 **相變 (Phase Transition)** 特徵。
 
 ### 3. 對沖行為的精神分裂 (Hedging Schizophrenia)
