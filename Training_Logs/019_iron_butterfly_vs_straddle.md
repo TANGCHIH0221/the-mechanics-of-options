@@ -16,6 +16,7 @@
 
 ### 2. 峰度 (Kurtosis) 的幾何學
 Iron Butterfly (IBF) 的定價本質上是關於波動率曲面的 **曲率 (Curvature)**。
+
 $$\text{Value}_{IBF} \approx \text{Short Straddle}_{ATM} + \text{Long Strangle}_{OTM}$$
 
 * **平坦曲面 (Gaussian):** 峰度 $\kappa = 3$。
@@ -38,7 +39,9 @@ $$\Gamma_{Net} = \Gamma_{Short}^{ATM} + \Gamma_{Long}^{Wing}$$
 
 ### 2. 數學推導：指數級爆發
 為何反轉如此劇烈？觀察 Gamma 公式中的核：
+
 $$\Gamma \propto \frac{1}{S\sigma\sqrt{T}} e^{-\frac{d_1^2}{2}}$$
+
 當價格從 ATM ($S \approx K_{ATM}$) 移向 Wing ($S \to K_{Wing}$)：
 1.  **ATM Term:** $d_1$ 變大，$e^{-d_1^2}$ 衰減至 0。
 2.  **Wing Term:** $d_1$ 接近 0，$e^{-d_1^2}$ 衝向峰值 1。
