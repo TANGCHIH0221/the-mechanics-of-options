@@ -63,9 +63,13 @@ $$\Gamma \propto \frac{1}{S\sigma\sqrt{T}} e^{-\frac{d_1^2}{2}}$$
 ### 2. PnL 歸因的幻覺
 理論上 IBF 是 Net Short Vega。但在崩盤初期，PnL 常出現詭異的「抗跌」甚至獲利。
 **Vega PnL 近似公式：**
+
 $$dV \approx \text{Vega}_{ATM} \cdot d\sigma_{ATM} + \text{Vega}_{Wing} \cdot d\sigma_{Wing}$$
+
 雖然 $|\text{Vega}_{ATM}| > |\text{Vega}_{Wing}|$，但是 $d\sigma_{Wing} \gg d\sigma_{ATM}$。
+
 $$\underbrace{\text{Vega}_{Wing}^{Long} \cdot \text{Explosion}}_{\text{Massive Gain}} \approx \underbrace{|\text{Vega}_{ATM}^{Short}| \cdot \text{Rise}}_{\text{Loss}}$$
+
 **結果：** Long Put Wing 的過度反應抵銷了核心部位的虧損。
 
 ### 3. 代價：Gamma Trap & Delayed Crush
