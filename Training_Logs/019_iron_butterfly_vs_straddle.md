@@ -70,7 +70,8 @@ $$\Gamma \propto \frac{1}{S\sigma\sqrt{T}} e^{-\frac{d_1^2}{2}}$$
 
 $$dV \approx \text{Vega}_{ATM} \cdot d\sigma_{ATM} + \text{Vega}_{Wing} \cdot d\sigma_{Wing}$$
 
-雖然 $|\text{Vega}_{ATM}| > |\text{Vega}_{Wing}|$ ，但是 $d\sigma_{Wing} \gg d\sigma_{ATM}$。
+雖然 $
+$|\text{Vega}_{ATM}| > |\text{Vega}_{Wing}|$$ ，但是 $d\sigma_{Wing} \gg d\sigma_{ATM}$。
 
 $$\underbrace{\text{Vega}_{Wing}^{Long} \cdot \text{Explosion}}_{\text{Massive Gain}} \approx \underbrace{|\text{Vega}_{ATM}^{Short}| \cdot \text{Rise}}_{\text{Loss}}$$
 
