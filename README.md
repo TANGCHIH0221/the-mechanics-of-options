@@ -139,7 +139,7 @@
     * **重點：**  利用 Jensen 不等式捕捉市場結構的「去相干 (Decoherence)」，透過數學推導識別「骯髒相關性 (Dirty Correlation)」的定價誤區，並量化 Mark-to-Market 的流動性陷阱。
 -  * [x] **[Ratio Backspreads](Training_Logs/018_ratio_backspread.md)**
     * **重點：**  Ratio Backspread 的死亡谷 (Valley of Death)、Theta–Gamma 對抗、Gamma Flip 相變點、BEP 主方程、Skew Flattening 對 Weighted Vega 的反殺、以及高峰度 (Kurtosis) 在凸性策略中的關鍵角色。
--  * [x] **[Iron Butterfly vs. Straddle — 峰度交易與幾何陷阱](Training_Logs/019_iron_butterfly_vs_straddl.md)**
+-  * [x] **[Iron Butterfly vs. Straddle — 峰度交易與幾何陷阱](Training_Logs/019_iron_butterfly_vs_straddle.md)**
     * **重點：**  解析 Short Straddle 與 Iron Butterfly 的物理本質差異，識別 Gamma 反轉點 (Gamma Flip) 的對沖變奏，以及量化 Skew 形狀對結構化策略的損益歸因。 
 
 ---
