@@ -71,15 +71,11 @@ $$|\Delta_S| > |\Delta_F|$$
     $$|\Delta_S^{new}| = e^{(r_{new}-q)T}|\Delta_F(F_{new})| < |\Delta_S^{old}|$$
 2. **淨部位變動 (Net Position Shift):**
     你手中的 Short Stock 數量是根據舊的（較大的） $\Delta_S^{\text{old}}$ 建立的。
+   $$\text{Net Delta} = \Delta_S^{new} - \Delta_S^{old} < 0$$
 
-$$
-\text{Net Delta}
-=
-\Delta_S^{new} \; (\text{Smaller Long})
--
-\Delta_S^{old} \; (\text{Fixed Short})
-< 0
-$$
+    * **$\Delta_S^{new}$ (Long Call):** 變小了 (Smaller Long)。
+    * **$\Delta_S^{old}$ (Short Stock):** 固定不變 (Fixed Short)。
+    * **結果:** 總部位呈現淨空頭 (Net Short)。
 
 ### 3. 結局：技術性做空 (Technical Net Short)
 * **狀態：** 你瞬間變成了 **Net Short**。
