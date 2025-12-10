@@ -106,6 +106,8 @@
     * **重點：** 當波動率 ($\sigma$) 激增時，Vomma 導致空頭部位的慣性呈現指數級放大（凸性陷阱）；利用 $\mathcal{V} \approx \Gamma S^2 \tau$ 證明長天期選擇權本質上是時間槓桿化後的 Vol-of-Vol 賭注。
 -   * [x] **[Color (Gamma Decay)](Training_Logs/009_color_gamma_decay.md)**
     * **重點：** 三階希臘值 Color ($\partial \Gamma / \partial t$) 的物理意義。推導 ATM Gamma 的 $T^{-3/2}$ 發散性質，以及為何用短期選擇權對沖長期 Gamma 會導致結構性的「自動做空陷阱」。
+-   * [x] **[ Dual Delta](Training_Logs/011_dual_delta.md)**
+    * **重點：** 解析 Spot Delta 與 Forward Delta 的物理參照系差異，推導利率 ($r$) 對避險比率的扭曲，以及識別「幽靈虧損 (Phantom PnL)」與「降息陷阱」。
 ---
 
 ### Module 3：波動率曲面幾何 (Vol Surface Geometry)
