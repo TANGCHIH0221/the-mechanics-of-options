@@ -72,13 +72,15 @@ $$|\Delta_S| > |\Delta_F|$$
 2.  **淨部位變動 (Net Position Shift):**
     你手中的 Short Stock 數量是根據舊的（較大的）$\Delta_S^{old}$ 建立的。
 
-    $$\text{Net Delta} = \underbrace{\Delta_S^{new}}_{\text{Smaller Long}} - \underbrace{\Delta_S^{old}}_{\text{Fixed Short}} < 0$$
+    $$
+    \text{Net Delta} = \underbrace{\Delta_S^{new}}_{\text{Smaller Long}} - \underbrace{\Delta_S^{old}}_{\text{Fixed Short}} < 0
+    $$
 
 ### 3. 結局：技術性做空 (Technical Net Short)
 * **狀態：** 你瞬間變成了 **Net Short**。
 * **災難場景：** 降息通常伴隨市場大漲 (Risk-on Rally)。
-    * 市場：$\uparrow$ 暴漲。
-    * 你的部位：$\downarrow$ 做空 (因數學公式變動導致的避險過剩)。
+    * 市場： $\uparrow$ 暴漲。
+    * 你的部位： $\downarrow$ 做空 (因數學公式變動導致的避險過剩)。
 * **對策：** 在降息發生的瞬間，必須機械式地執行 **Buy Spot** 以重新平衡 Delta，否則將面臨雙重擊殺 (Whipsaw)。
 
 ---
