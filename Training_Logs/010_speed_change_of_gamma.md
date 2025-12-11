@@ -71,9 +71,12 @@ $$\text{Speed} = \frac{\partial \Gamma}{\partial S} = - \frac{\Gamma}{S} \left( 
 
 **2. 災難公式 (The PnL Equation):**
 將符號代入三階 PnL 公式：
-$$PnL_{total} \approx \underbrace{\Delta_{hedge}}_{\approx 0} + \underbrace{\frac{1}{2}(-|\Gamma|)(dS)^2}_{\text{Gamma Loss}} - \mathbf{\underbrace{\frac{1}{6}|\text{Speed}|(dS)^3}_{\text{Speed Loss}}}$$
 
-* 注意三階項：$-\text{Speed} \times (+dS)^3$。
+$$
+PnL_{total} \approx \underbrace{\Delta_{hedge}}_{\approx 0} + \underbrace{\frac{1}{2}(-|\Gamma|)(dS)^2}_{\text{Gamma Loss}} - \mathbf{\underbrace{\frac{1}{6}|\text{Speed}|(dS)^3}_{\text{Speed Loss}}}
+$$
+
+* 注意三階項： $-\text{Speed} \times (+dS)^3$。
 * 由於 $dS$ 為正且很大，$(dS)^3$ 是巨大的正數。
 * **結論：** Speed 項會造成額外的、巨大的負 PnL。虧損不是按平方增長，而是按 **立方 (Cubic)** 爆炸。
 
