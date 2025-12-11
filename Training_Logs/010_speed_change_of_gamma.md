@@ -1,7 +1,7 @@
 # Speed (Change of Gamma) 
 
 
-* **Focus:** 深入解析選擇權的三階希臘值 Speed (DgammaDspot)，利用泰勒展開式的立方項 (Cubic Term) 重新定義極端行情下的 PnL 歸因，並揭示 Short Gamma 策略在熔斷 (Melt-up) 時的「死亡螺旋」物理機制。
+* **Focus:** 深入解析選擇權的三階希臘值 Speed (DgammaDspot)，利用泰勒展開式的立方項 (Cubic Term) 重新定義極端行情下的 PnL 歸因，並展示 Short Gamma 策略在熔斷 (Melt-up) 時的「死亡螺旋」物理機制。
 
 ---
 
