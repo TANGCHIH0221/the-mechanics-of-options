@@ -49,7 +49,7 @@ $$\text{Impact} \propto \frac{1}{\alpha D_{0}} (e^{\alpha Q} - 1)$$
 單筆交易造成的價格滑價 $\Delta P$ 近似於：
 $$\Delta P \sim \frac{Q}{L}$$
 
-在條件事件「黑洞發生」下，$L$ 逼近 0，且有正機率落在 0 附近。因此，滑價的條件期望值將會發散：
+在條件事件「黑洞發生」下， $L$ 逼近 0，且有正機率落在 0 附近。因此，滑價的條件期望值將會發散：
 $$\mathbb{E}\left[ \frac{1}{L} \mid \text{crash} \right] \to \infty$$
 
 * **結論：** **Stop Market Order 在黑洞中的期望損失 = 負無限大 (發散)。** 在此處執行市價單，等同於在黑洞視界邊緣自殺。
