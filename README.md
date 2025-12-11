@@ -75,7 +75,7 @@
 
 ---  
 
-### Module 1：微觀結構與重力場(Microstructure & Gamma)
+### Module 1：微觀結構(Microstructure)
 
 - **研究重點**：  
   - Open Interest 分佈  
@@ -94,7 +94,7 @@
 
 ---
 
-### Module 2：希臘字母的流體力學 (Advanced Greeks)
+### Module 2：希臘字母 (Advanced Greeks)
 
 - **研究重點**：  
   - 超越 Delta / Gamma / Theta 的二階希臘值：Charm, Vanna, Vomma …  
@@ -106,8 +106,11 @@
     * **重點：** 當波動率 ($\sigma$) 激增時，Vomma 導致空頭部位的慣性呈現指數級放大（凸性陷阱）；利用 $\mathcal{V} \approx \Gamma S^2 \tau$ 證明長天期選擇權本質上是時間槓桿化後的 Vol-of-Vol 賭注。
 -   * [x] **[Color (Gamma Decay)](Training_Logs/009_color_gamma_decay.md)**
     * **重點：** 三階希臘值 Color ($\partial \Gamma / \partial t$) 的物理意義。推導 ATM Gamma 的 $T^{-3/2}$ 發散性質，以及為何用短期選擇權對沖長期 Gamma 會導致結構性的「自動做空陷阱」。
+-   * [x] **[Speed (Change of Gamma)](Training_Logs/010_speed_change_of_gamma.md)**
+    * **重點：** 深入解析選擇權的三階希臘值 Speed (DgammaDspot)，利用泰勒展開式的立方項 (Cubic Term) 重新定義極端行情下的 PnL 歸因，並展示 Short Gamma 策略在熔斷 (Melt-up) 時的「死亡螺旋」物理機制。
 -   * [x] **[ Dual Delta](Training_Logs/011_dual_delta.md)**
     * **重點：** 解析 Spot Delta 與 Forward Delta 的物理參照系差異，推導利率 ($r$) 對避險比率的扭曲，以及識別「幽靈虧損 (Phantom PnL)」與「降息陷阱」。
+
 ---
 
 ### Module 3：波動率曲面幾何 (Vol Surface Geometry)
