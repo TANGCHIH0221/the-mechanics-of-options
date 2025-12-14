@@ -47,6 +47,7 @@ $$
 ### 2.3 敏感度分析 (Sensitivity Analysis)
 考慮 Risk Reversal 價值的變化 $\Delta RR$。利用一階泰勒展開：
 
+
 $$
 \Delta RR \approx \frac{\partial RR}{\partial \sigma(x)} \delta\sigma(x) + \frac{\partial RR}{\partial \sigma(-x)} \delta\sigma(-x)
 $$
@@ -63,6 +64,7 @@ $$
 $$
 
 代入後得到：
+
 $$
 \Delta RR \approx \nu \cdot [\delta\sigma(x) - \delta\sigma(-x)]
 $$
