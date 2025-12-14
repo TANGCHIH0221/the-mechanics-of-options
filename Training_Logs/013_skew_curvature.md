@@ -108,8 +108,7 @@ $$
 
 ---
 
-## Section 4: Python Lab Concept (虛擬程式碼)
-
+## Section 4: Python Lab Concept 
 *目標：構建「25-Delta Butterfly」指標，量化監控市場的 Curvature 能量。*
 
 ```python
