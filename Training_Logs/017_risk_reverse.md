@@ -51,10 +51,7 @@ $$
 \Delta RR \approx \frac{\partial RR}{\partial \sigma(x)} \delta\sigma(x) + \frac{\partial RR}{\partial \sigma(-x)} \delta\sigma(-x)
 $$ 
 
-由於 $RR$ 涉及買 Call 賣 Put，其對應的 Vega 敏感度為：
-$$
-\Delta RR \approx \text{Vega}_{Call}(x) \cdot \delta\sigma(x) - \text{Vega}_{Put}(-x) \cdot \delta\sigma(-x)
-$$
+由於 $RR$ 涉及買 Call 賣 Put，要注意其對應的 Vega 敏感度
 
 **關鍵對稱性：** 在 Black-Scholes 模型中，對於對稱的 Log-Moneyness，Vega 是近似偶對稱的：
 
