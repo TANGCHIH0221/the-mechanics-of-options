@@ -100,6 +100,8 @@
   - 超越 Delta / Gamma / Theta 的二階希臘值：Charm, Vanna, Vomma …  
   - 在不同市場情境中，這些二階效應如何主導 P/L
 - **討論問題**：
+-   * [x] **[Vanna-Volga 方法](Training_Logs/007_vanna_volga_method.md)**
+    * **重點：** 利用微擾理論 (Perturbation Theory) 修正 Black-Scholes 的平坦假設，透過靜態複製 (Static Replication) 捕捉 Vanna (Skew) 與 Volga (Convexity) 的市場溢價。
 -   * [x] **[ 期限結構與 Charm](Training_Logs/002_Term_Structure_and_Calendars.md)**
     * **重點：** 遠期波動率 (Forward Vol) 的能量守恆、Calendar Spread 的 Gamma 陷阱、以及週末的 Charm 效應。
 -   * [x] **[波動率的慣性與凸性陷阱](Training_Logs/008_Vol_of_vol.md)**
