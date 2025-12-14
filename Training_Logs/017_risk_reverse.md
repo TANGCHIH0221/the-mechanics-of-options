@@ -57,6 +57,7 @@ $$
 $$
 
 **關鍵對稱性：** 在 Black-Scholes 模型中，對於對稱的 Log-Moneyness，Vega 是近似偶對稱的：
+
 $$
 \text{Vega}_{Call}(x) \approx \text{Vega}_{Put}(-x) \equiv \nu
 $$
