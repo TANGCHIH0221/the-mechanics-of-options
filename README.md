@@ -144,6 +144,8 @@
 - **討論問題**：
 -   * [x] **[Dispersion trading](Training_Logs/016_dispersion_trading.md)**
     * **重點：**  利用 Jensen 不等式捕捉市場結構的「去相干 (Decoherence)」，透過數學推導識別「骯髒相關性 (Dirty Correlation)」的定價誤區，並量化 Mark-to-Market 的流動性陷阱。
+-   * [x] **[風險逆轉 (Risk Reversal) 與偏斜交易](Training_Logs/017_risk_reverse.md)**
+    * **重點：**  利用風險逆轉 (Risk Reversal) 結構交易波動率曲面的「斜率 (Skew)」，理解宇稱不守恆 (Parity Violation) 下的定價邏輯與陷阱。
 -  * [x] **[Ratio Backspreads](Training_Logs/018_ratio_backspread.md)**
     * **重點：**  Ratio Backspread 的死亡谷 (Valley of Death)、Theta–Gamma 對抗、Gamma Flip 相變點、BEP 主方程、Skew Flattening 對 Weighted Vega 的反殺、以及高峰度 (Kurtosis) 在凸性策略中的關鍵角色。
 -  * [x] **[Iron Butterfly vs. Straddle — 峰度交易與幾何陷阱](Training_Logs/019_iron_butterfly_vs_straddle.md)**
