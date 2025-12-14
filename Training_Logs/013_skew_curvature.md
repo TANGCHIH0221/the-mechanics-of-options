@@ -30,10 +30,13 @@
 
 **A. 狀態方程式**
 風險中立密度 $q(K)$ 由 Call Price $C(K)$ 的二階導數決定：
+
 $$
 q(K) = e^{rT} \frac{d^2 C}{d K^2}
 $$
+
 然而，市場價格 $C$ 是由 BSM 公式代入隱含波動率 $\sigma(K)$ 計算得出：
+
 $$
 C(K) = C_{BS}(S, K, \sigma(K), T)
 $$
@@ -41,19 +44,24 @@ $$
 **B. 鏈式法則展開 (The Total Derivative)**
 對 $K$ 微分兩次，考慮 $\sigma$ 是 $K$ 的函數：
 第一階導數 (Dual Delta):
+
 $$
 \frac{d C}{d K} = \frac{\partial C_{BS}}{\partial K} + \frac{\partial C_{BS}}{\partial \sigma} \frac{\partial \sigma}{\partial K}
 $$
+
 第二階導數 (Density Function Core):
+
 $$
 \frac{d^2 C}{d K^2} = \underbrace{\frac{\partial^2 C_{BS}}{\partial K^2}}_{\text{Gamma}} + \underbrace{2 \frac{\partial^2 C_{BS}}{\partial K \partial \sigma} \frac{\partial \sigma}{\partial K}}_{\text{Vanna Interaction}} + \underbrace{\frac{\partial^2 C_{BS}}{\partial \sigma^2} \left(\frac{\partial \sigma}{\partial K}\right)^2}_{\text{Volga Interaction}} + \underbrace{\frac{\partial C_{BS}}{\partial \sigma} \frac{\partial^2 \sigma}{\partial K^2}}_{\text{Vega } \times \text{ Curvature}}
 $$
 
 **C. 物理意義解析**
 在深度虛值 (Deep OTM) 區域，標準 BSM 的 Gamma ($\frac{\partial^2 C_{BS}}{\partial K^2}$) 會迅速衰減至 0。此時，$q(K)$ 的值（即尾部機率）主要由最後一項支撐：
+
 $$
 q(K)_{tail} \approx e^{rT} \cdot \text{Vega} \cdot \frac{\partial^2 \sigma}{\partial K^2}
 $$
+
 * **結論：** 若 $\frac{\partial^2 \sigma}{\partial K^2} > 0$ (Smile 存在)，則 $q(K)$ 在尾部的值會顯著大於常態分佈。**Curvature 直接「撐大」了機率分佈的尾部。**
 
 ### 2. 泰勒展開與峰度係數
@@ -68,9 +76,11 @@ $$
 * $\gamma_2$: **Excess Kurtosis (超額峰度)**
 
 **映射關係：**
+
 $$
 \frac{\partial^2 \sigma_{imp}}{\partial k^2} \propto \text{Kurtosis } (\gamma_2)
 $$
+
 * 交易 **Long Butterfly** = 交易 **Long Curvature** = 交易 **Long Kurtosis (Fat Tails)**。
 * 你賭的不是方向，而是賭標準模型 (Normal Distribution) 的失效程度。
 
