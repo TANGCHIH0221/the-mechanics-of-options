@@ -41,29 +41,7 @@ Vanna-Volga (VV) 方法的核心思想是 **靜態複製 (Static Replication)**�
 我們忽略 Delta (可通過期貨對沖) 和 Theta，專注於波動率相關的高階風險。建立線性方程組 $A\mathbf{w} = \mathbf{b}$：
 
 $$
-\underbrace{
-\begin{bmatrix}
-\mathcal{V}(I_1) & \mathcal{V}(I_2) & \mathcal{V}(I_3) \\
-\text{Vanna}(I_1) & \text{Vanna}(I_2) & \text{Vanna}(I_3) \\
-\text{Volga}(I_1) & \text{Volga}(I_2) & \text{Volga}(I_3)
-\end{bmatrix}
-}_{\mathbf{A}: \text{Basis Risk Matrix}}
-\cdot
-\underbrace{
-\begin{bmatrix}
-w_1 \\
-w_2 \\
-w_3
-\end{bmatrix}
-}_{\mathbf{w}: \text{Weights}}
-=
-\underbrace{
-\begin{bmatrix}
-\mathcal{V}(O_{target}) \\
-\text{Vanna}(O_{target}) \\
-\text{Volga}(O_{target})
-\end{bmatrix}
-}_{\mathbf{b}: \text{Target Risk Vector}}
+\underbrace{\begin{bmatrix} \mathcal{V}(I_1) & \mathcal{V}(I_2) & \mathcal{V}(I_3) \\ \text{Vanna}(I_1) & \text{Vanna}(I_2) & \text{Vanna}(I_3) \\ \text{Volga}(I_1) & \text{Volga}(I_2) & \text{Volga}(I_3) \end{bmatrix}}_{\mathbf{A}: \text{Basis Risk Matrix}} \cdot \underbrace{\begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix}}_{\mathbf{w}: \text{Weights}} = \underbrace{\begin{bmatrix} \mathcal{V}(O_{target}) \\ \text{Vanna}(O_{target}) \\ \text{Volga}(O_{target}) \end{bmatrix}}_{\mathbf{b}: \text{Target Risk Vector}}
 $$
 
 ### 2.3 求解與定價公式
