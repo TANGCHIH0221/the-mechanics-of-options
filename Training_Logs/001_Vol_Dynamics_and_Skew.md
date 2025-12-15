@@ -66,9 +66,7 @@ $$\sigma_{loc}(K) \approx \sigma_{imp}(K) + K \frac{\partial \sigma_{imp}}{\part
 * **Hedge:** Long Futures 以中和初始 Delta。
 
 ### 獲利原理 (The Physics of P&L)
-透過調整口數比例 (1 vs 2)，我們針對 Vol Surface 的平行移動做到了 **Vega Neutral**。我們的 Alpha 來自於 **斜率的變化**：
-
-$$P\&L \approx \text{Vega}_{short} \times (\text{OTM Vol 下降}) - \text{Vega}_{long} \times (\text{ATM Vol 下降})$$
+透過調整口數比例 (1 vs 2)，我們針對 Vol Surface 的平行移動做到了 **Vega Neutral**。我們的 Alpha 來自於 **斜率的變化**
 
 由於我們預期 $\Delta\sigma_{OTM} \gg \Delta\sigma_{ATM}$，即使整體市場不動，該結構也能因曲線變平而獲利。
 
