@@ -151,7 +151,9 @@
 -  * [x] **[Ratio Backspreads](Training_Logs/018_ratio_backspread.md)**
     * **重點：**  Ratio Backspread 的死亡谷 (Valley of Death)、Theta–Gamma 對抗、Gamma Flip 相變點、BEP 主方程、Skew Flattening 對 Weighted Vega 的反殺、以及高峰度 (Kurtosis) 在凸性策略中的關鍵角色。
 -  * [x] **[Iron Butterfly vs. Straddle — 峰度交易與幾何陷阱](Training_Logs/019_iron_butterfly_vs_straddle.md)**
-    * **重點：**  解析 Short Straddle 與 Iron Butterfly 的物理本質差異，識別 Gamma 反轉點 (Gamma Flip) 的對沖變奏，以及量化 Skew 形狀對結構化策略的損益歸因。 
+    * **重點：**  解析 Short Straddle 與 Iron Butterfly 的物理本質差異，識別 Gamma 反轉點 (Gamma Flip) 的對沖變奏，以及量化 Skew 形狀對結構化策略的損益歸因。
+-  * [x] **[Tail Hedging and Kelly Criterion](Training_Logs/020_tail_hedging_Kelly_criterion.md)**
+    * **重點：** 利用遍歷性 (Ergodicity) 修正凱利公式，建立對抗乘法過程崩潰的資金管理系統，並基於物理相變 (Phase Transition) 執行機械化變現。
 
 ---
 
