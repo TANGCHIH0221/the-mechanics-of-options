@@ -83,7 +83,7 @@ $$\sigma_{loc}(K) \approx \sigma_{imp}(K) + K \frac{\partial \sigma_{imp}}{\part
 
 ---
 
-### Section 4: 程式碼視覺化概念 (Python Lab)
+### Section 4: Python Lab concept
 *計劃實作：分析 Skew 斜率與 LV 代理變數*
 
 ```python
