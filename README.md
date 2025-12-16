@@ -127,7 +127,7 @@
     * **重點：** Vol Cone 的無條件分佈偏差、Vol-of-Vol 的二階加速度訊號、Range-based 高熵估計量的必要性、跳躍分佈的條件化校正，以及 Earnings Regime 下必須以 Dual Cones 避免 Short Vol 的錯誤勝率評估。
  
 -  * [x] **[skew and curvature](Training_Logs/013_skew_curvature.md)**
-    * **重點：** 波動率曲面的二階幾何結構、隱含波動率曲率 ($\sigma_{KK}$) 與機率密度峰度 (Kurtosis) 的嚴格數學映射、以及 V 型反轉中的遲滯陷阱 (Hysteresis)。
+    * **重點：** 波動率曲面的二階幾何結構、隱含波動率曲率與機率密度峰度 (Kurtosis) 的嚴格數學映射、以及 V 型反轉中的遲滯陷阱 (Hysteresis)。
 -  * [x] **[Event Volatility](Training_Logs/014_event_volatility.md)**
     * **重點：** 利用 Dirac Delta 函數建模從總變異數中剝離事件波動率 (Event Variance Extraction)、理解波函數坍縮 (IV Crush) 的物理機制，以及低波動率環境下的 Gamma 奇異點風險。
 
